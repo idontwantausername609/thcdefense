@@ -1,0 +1,668 @@
+/* ==============================
+   Base Styles & Typography
+============================== */
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', 'Cinzel', Arial, Helvetica, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  font-size: 1rem;
+}
+
+/* Headings, nav, section titles: Cinzel */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.welcome-block h2,
+.card-text h3,
+.hero-text h2,
+header h1,
+nav a {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  color: #191919;
+  letter-spacing: 0.04em;
+}
+
+.card-text h3 {
+  color: #191919;
+  font-weight: 500;
+}
+
+/* Body/copy text: Nunito Sans */
+p,
+.welcome-block p,
+.card-text p,
+.hero-text p,
+.hero-contact-bar,
+.hero-contact-text,
+.hero-email-button {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: 'Cinzel', serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ==============================
+   Containers
+============================== */
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.container.narrow {
+  max-width: 950px;
+  margin: 2.5rem auto 0 auto;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2.5rem 2rem 0 2rem;
+}
+
+/* ==============================
+   Header & Navigation
+============================== */
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #f8f8f8;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+
+.logo-link {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-link h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.logo-link:hover h1 {
+  text-decoration: none;
+  /* color: #bbb; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover:not(.logo-link) {
+  color: #bbb;
+}
+
+/* ==============================
+   Hero & Page Hero
+============================== */
+.page-hero.compact {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.page-hero {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+  
+}
+
+.hero-text {
+  max-width: 100%;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: normal;
+  font-family: 'Cinzel', serif;
+}
+
+.hero p {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.06rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.hero-contact-bar {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.hero-contact-text {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: 'Cinzel', serif;
+}
+
+.hero-contact-text a {
+  color: #1a1a1a;
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero-contact-text a:hover {
+  text-decoration: none;
+}
+
+.hero-email-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  border: 2px solid #1a1a1a;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+.hero-email-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* ---- Only Home Hero Paragraph Spacing ---- */
+.home-hero .hero-text p {
+  margin-bottom: 0.3rem;
+}
+.home-hero .hero-text p + p {
+  margin-top: 0.2rem;
+}
+
+/* ==============================
+   Section Headings
+============================== */
+.content-section h2,
+.content-section h3 {
+  font-family: 'Cinzel', serif;
+}
+.content-section h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  max-width: 1400px;
+}
+
+.arrest-page .container.narrow h3 {
+  position: relative;
+  display: block;
+  width: 1200px;
+  margin: 2rem 1.rem;
+  left: 61%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+}
+
+/* ==============================
+   What J. Horn Does - Card Section
+============================== */
+.what-jhorn-does {
+  background: #f9f9f9;
+  padding: 80px 0 0 0;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 0;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+}
+
+.card {
+  background: #f9f9f9;
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.card:first-child {
+  border-left: none;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card-text {
+  padding: 32px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.card-text h3 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 1.5em;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+  color: #191919;
+  text-transform: capitalize;
+}
+
+.card-text p {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 950px) {
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 95vw;
+  }
+  .card {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    border-radius: 0;
+  }
+  .card:first-child, .card:last-child {
+    border-radius: 0;
+    border-top: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .container.narrow {
+    padding: 1.2rem 0.4rem 0 0.4rem;
+  }
+  .hero-text h2 {
+    white-space: normal;
+    font-size: 1.5rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  .card-text {
+    padding: 24px 7px;
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+   Contact Page Layout & Form
+============================== */
+.contact-grid {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ---- Form Styling ---- */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 1.2rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  background: transparent;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  border: 2px solid #1a1a1a;
+  background: none;
+  font-size: 1rem;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  align-self: center;
+}
+
+.contact-form button:hover {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.policy-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.policy-link:hover {
+  text-decoration: none;
+}
+
+/* ---- Contact Info ---- */
+.contact-info h3,
+.contact-form h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-info .phone {
+  margin: 0 0 2rem;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.contact-info .phone a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+
+/* ==============================
+   Hours Dropdown
+============================== */
+.hours-container {
+  width: 100%;
+}
+
+.hours-toggle-bar {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hours-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.hours-preview.hide {
+  visibility: hidden;
+}
+
+.hours-preview.hide .hours-caret {
+  visibility: visible;
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.hours-caret {
+  transition: transform 0.3s ease;
+  visibility: visible !important;
+}
+
+.hours-caret.rotated {
+  transform: rotate(180deg);
+  margin-left: auto;
+}
+
+.hours-table-wrapper {
+  display: none;
+  animation: dropdown 0.3s ease;
+}
+
+.hours-table-wrapper.show {
+  display: block;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.hours-table td {
+  padding: 0.4rem 0;
+  width: 50%;
+}
+
+.hours-table tr.today td {
+  font-weight: bold;
+}
+
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background-color: #1a1a1a;
+  color: #f8f8f8;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-content p {
+  font-family: inherit;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #f8f8f8;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  filter: invert(100%);
+  transition: opacity 0.3s;
+}
+
+.footer-icons img:hover {
+  opacity: 0.7;
+}
+
+/* ==============================
+   Responsive Design for Navigation and Contact
+============================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
+}
+
+/* --------------------------------
+   Responsive: Hero Heading Wraps
+-------------------------------- */
+@media (max-width: 700px) {
+  .hero-text h2 {
+    white-space: normal;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes dropdown-close {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+}
+
+/* ===========================
+   Unified Page-Body Section
+=========================== */
+.page-body {
+  background: #f9f9f9;
+  padding: 0;
+}
+.container.narrow {
+  max-width: 950px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+}
+.welcome-block {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+.welcome-block h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.welcome-block p {
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.jhorn-cards-block {
+  margin-bottom: 2rem;
+}
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}

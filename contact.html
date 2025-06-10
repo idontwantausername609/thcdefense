@@ -1,0 +1,146 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | THC Defense</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <h1>THC Defense</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="arrest-records.html">Arrest Records Explained</a></li>
+        <li><a href="marijuana-laws.html">Marijuana Laws</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero compact">
+  <div class="hero-text">
+    <h2>Contact Us</h2>
+  </div>
+</section>
+
+  <br>
+  
+<section class="content-section">
+  <div class="container contact-grid">
+    <div class="contact-form">
+      <h3 class="section-heading">Get in Touch!</h3>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <div class="form-footer">
+          <button type="submit">Send Message</button>
+          <small class="disclaimer">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy" target="_blank" class="policy-link"><b>Privacy Policy</b></a> and
+            <a href="https://policies.google.com/terms" target="_blank" class="policy-link"><b>Terms of Service</a></b> apply.
+          </small>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h3 class="section-heading">Jerry Horn, Attorney at Law – THCDefense.com</h3>
+      <p class="phone"><a href="tel:8326330213">832.633.0213</a></p>
+
+      <div class="hours-container">
+        <h3 class="section-heading">Hours</h3>
+        <div class="hours-toggle-bar" onclick="toggleHours()">
+          <div id="hours-preview" class="hours-preview">
+            <span>Open today:</span>
+            <span id="today-time">9:00 am – 5:00 pm</span>
+            <span class="hours-caret">▾</span>
+          </div>
+
+          <div id="hours-table" class="hours-table-wrapper">
+            <table class="hours-table">
+              <tr><td>Mon</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Tue</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Wed</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Thu</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Fri</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Sat</td><td>Closed</td></tr>
+              <tr><td>Sun</td><td>Closed</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <br>
+  
+<footer>
+  <div class="container footer-content">
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/112168584305878" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.yelp.com/biz/j-horn-and-associates-houston" target="_blank" aria-label="Yelp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
+      </a>
+    </div>
+    <p>&copy; 2025 THCDefense.com – All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="arrest-records.html">Arrest Records</a> |
+      <a href="marijuana-laws.html">Marijuana Laws</a> |
+      <a href="faqs.html">FAQs</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  const preview = document.getElementById("hours-preview");
+  const wrapper = document.getElementById("hours-table");
+  const caret = document.querySelector(".hours-caret");
+  const todayText = document.getElementById("today-time");
+  const rows = wrapper.querySelectorAll("tr");
+
+  // Adjust today indexing so Monday starts at 0
+  const today = (new Date().getDay() + 6) % 7;
+
+  rows.forEach((row, index) => {
+    if (index === today) {
+      row.classList.add("today");
+      todayText.textContent = row.children[1].textContent;
+    }
+  });
+
+  function toggleHours() {
+    if (wrapper.classList.contains("show")) {
+      wrapper.style.animation = "dropdown-close 0.3s ease";
+      setTimeout(() => wrapper.classList.remove("show"), 300);
+    } else {
+      wrapper.style.animation = "dropdown 0.3s ease";
+      wrapper.classList.add("show");
+    }
+    preview.classList.toggle("hide");
+    caret.classList.toggle("rotated");
+  }
+</script>
+
+</body>
+</html>
