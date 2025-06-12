@@ -398,8 +398,20 @@ nav a.active {
   }
   header .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 0.5em 0.5em 0 0.5em;
+  }
+  .logo-link {
+    display: block;
+    width: 100vw;
+    text-align: left;
+    padding-left: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .logo-link h1 {
+    font-size: 2rem;
+    margin: 0.2em 0 0.3em 0;
+    letter-spacing: 0.03em;
   }
   nav ul {
     flex-direction: column !important;
@@ -428,45 +440,40 @@ nav a.active {
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
+    text-align: center !important;
   }
   nav a:last-child {
     border-bottom: none !important;
   }
-  .cards {
+  /* Contact form button fix */
+  .contact-form button, .contact-form input[type="submit"] {
+    font-size: 1.1rem !important;
+    color: #fff !important;
+    background: #222 !important;
+    border: 2px solid #222 !important;
+    border-radius: 30px !important;
+    padding: 0.7em 1.5em !important;
+    margin: 1.2em auto 0 auto !important;
+    display: block !important;
+    width: 90vw !important;
+    max-width: 350px !important;
+    text-align: center !important;
+    opacity: 1 !important;
+  }
+  .contact-form button[disabled], .contact-form input[type="submit"][disabled] {
+    opacity: 0.6 !important;
+    color: #fff !important;
+  }
+  /* Center footer content */
+  footer .container.footer-content {
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100vw !important;
-  }
-  .card {
-    min-height: unset;
-    padding: 1.2rem 0.7rem 1.5rem 0.7rem;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    border-radius: 0 !important;
-    width: 100vw !important;
-  }
-  .card-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .cards-cta {
-    font-size: 1rem;
-    margin-top: 2rem !important;
-  }
-  .welcome-block h2,
-  .section-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-  }
-  .welcome-block p {
-    font-size: 1rem;
-    margin-bottom: 0.7rem;
-  }
-  footer {
-    padding: 2rem 0.5rem 1.5rem 0.5rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
   }
   .footer-links {
     display: flex;
@@ -475,10 +482,11 @@ nav a.active {
     margin-top: 1rem;
     width: 100vw !important;
     align-items: center;
+    text-align: center;
   }
   .footer-links a {
     display: block;
-    margin: 0.2rem 0;
+    margin: 0.2rem auto;
     font-size: 1.1rem;
     padding: 0.5rem 0;
     color: #fff;
@@ -486,10 +494,6 @@ nav a.active {
     border-radius: 6px;
     width: 90vw;
     text-align: center;
-  }
-  .footer-links a:hover {
-    background: #444;
-    color: #fff;
   }
   .footer-icons {
     margin-top: 1rem;
@@ -502,9 +506,6 @@ nav a.active {
     width: 32px;
     height: 32px;
     margin: 0 0.2rem;
-  }
-  section, .welcome-block, .cards-cta {
-    margin-bottom: 1.2em !important;
   }
 }
 
@@ -816,8 +817,20 @@ footer {
   }
   header .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 0.5em 0.5em 0 0.5em;
+  }
+  .logo-link {
+    display: block;
+    width: 100vw;
+    text-align: left;
+    padding-left: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .logo-link h1 {
+    font-size: 2rem;
+    margin: 0.2em 0 0.3em 0;
+    letter-spacing: 0.03em;
   }
   nav ul {
     flex-direction: column !important;
@@ -846,45 +859,40 @@ footer {
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
+    text-align: center !important;
   }
   nav a:last-child {
     border-bottom: none !important;
   }
-  .cards {
+  /* Contact form button fix */
+  .contact-form button, .contact-form input[type="submit"] {
+    font-size: 1.1rem !important;
+    color: #fff !important;
+    background: #222 !important;
+    border: 2px solid #222 !important;
+    border-radius: 30px !important;
+    padding: 0.7em 1.5em !important;
+    margin: 1.2em auto 0 auto !important;
+    display: block !important;
+    width: 90vw !important;
+    max-width: 350px !important;
+    text-align: center !important;
+    opacity: 1 !important;
+  }
+  .contact-form button[disabled], .contact-form input[type="submit"][disabled] {
+    opacity: 0.6 !important;
+    color: #fff !important;
+  }
+  /* Center footer content */
+  footer .container.footer-content {
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100vw !important;
-  }
-  .card {
-    min-height: unset;
-    padding: 1.2rem 0.7rem 1.5rem 0.7rem;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    border-radius: 0 !important;
-    width: 100vw !important;
-  }
-  .card-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .cards-cta {
-    font-size: 1rem;
-    margin-top: 2rem !important;
-  }
-  .welcome-block h2,
-  .section-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-  }
-  .welcome-block p {
-    font-size: 1rem;
-    margin-bottom: 0.7rem;
-  }
-  footer {
-    padding: 2rem 0.5rem 1.5rem 0.5rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
   }
   .footer-links {
     display: flex;
@@ -893,10 +901,11 @@ footer {
     margin-top: 1rem;
     width: 100vw !important;
     align-items: center;
+    text-align: center;
   }
   .footer-links a {
     display: block;
-    margin: 0.2rem 0;
+    margin: 0.2rem auto;
     font-size: 1.1rem;
     padding: 0.5rem 0;
     color: #fff;
@@ -904,10 +913,6 @@ footer {
     border-radius: 6px;
     width: 90vw;
     text-align: center;
-  }
-  .footer-links a:hover {
-    background: #444;
-    color: #fff;
   }
   .footer-icons {
     margin-top: 1rem;
@@ -920,9 +925,6 @@ footer {
     width: 32px;
     height: 32px;
     margin: 0 0.2rem;
-  }
-  section, .welcome-block, .cards-cta {
-    margin-bottom: 1.2em !important;
   }
 }
 
