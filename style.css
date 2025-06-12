@@ -943,7 +943,7 @@ body,
   footer p, .footer-content p {
     text-align: center !important;
     width: 100% !important;
-    margin: 0.5rem 0 0 0 !important;
+    margin: 0.5rem 0 !important;
     font-size: 0.65rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
