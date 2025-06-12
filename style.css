@@ -397,17 +397,11 @@ nav a.active {
     box-sizing: border-box;
   }
   header {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    
+    display: block !important;
     padding: 0 !important;
   }
   header .container {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: block !important;
     width: 100% !important;
     padding: 0 !important;
   }
@@ -438,6 +432,13 @@ nav a.active {
     gap: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+  }
+  nav li {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
   }
   nav a {
     display: flex !important;
@@ -473,7 +474,6 @@ nav a.active {
   nav a:last-child {
     border-bottom: none !important;
   }
-
   /* CONTACT FORM BUTTON */
   .contact-form button, button, input[type="submit"] {
     display: block !important;
@@ -500,7 +500,6 @@ nav a.active {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-
   /* FOOTER */
   footer {
     padding: 1.1rem 0.4rem 1rem 0.4rem !important;
@@ -873,307 +872,6 @@ footer {
 
 /* ===========================
    12. Miscellaneous & Utility
-=========================== */
-.page-body {
-  background: #f9f9f9;
-  padding: 0;
-}
-
-.welcome-block {
-  margin-bottom: 3.5rem;
-  text-align: center;
-}
-.welcome-block h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2rem;
-  margin-bottom: 2.75rem;
-  margin-top: 0.75rem;
-  font-weight: bold;
-}
-.welcome-block p {
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-.jhorn-cards-block {
-  margin-bottom: 2rem;
-}
-.section-title {
-  font-family: 'Cinzel', serif;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-.legal-cite {
-  font-size: 0.92rem;
-  color: #4c4a4a;
-  font-style: italic;
-}
-
-.body-font {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-.content-section ul,
-.content-section ul.body-font,
-.content-section li,
-.content-section li.body-font {
-  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif !important;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #222;
-}
-
-/* Indent body text in content-section, but not headings */
-.content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-  margin-left: 1.5em;
-}
-
-/* Remove left margin from headings in content-section */
-.content-section h2,
-.content-section h3,
-.content-section h4,
-.content-section h5,
-.content-section h6 {
-  margin-left: 0;
-}
-
-/* Responsive: keep indentation on mobile */
-@media (max-width: 700px) {
-  .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-    margin-left: 0.7em;
-  }
-}
-
-/* Increase line spacing for body text */
-body,
-.content-section p,
-.content-section ul,
-.content-section li {
-  line-height: 1.5rem;
-}
-
-/* Contact page specific styles moved from contact.html */
-.container.contact-grid {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  gap: 8vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-@media (max-width: 950px) {
-  .container.contact-grid {
-    max-width: 98vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    gap: 5vw;
-  }
-}
-@media (max-width: 700px) {
-  .container.contact-grid {
-    max-width: 100%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    gap: 1em;
-  }
-}
-
-/* Hide caret in preview when open */
-/* REMOVE or comment out this rule:
-.hours-toggle-bar.open .hours-caret {
-  display: none !important;
-}
-*/
-
-.hours-caret-table {
-  display: none;
-  font-size: 1.2em;
-  vertical-align: middle;
-  margin-left: 0.5em;
-  transition: margin-left 0.3s;
-}
-.hours-toggle-bar.open .hours-caret-table {
-  display: inline-block;
-}
-/* Always show the preview row unless dropdown is open */
-.hours-table tr.preview-row {
-  display: table-row;
-}
-.hours-table.hide-preview-row tr.preview-row {
-  display: none;
-}
-/* Remove extra space above the table when preview row is hidden */
-.hours-table.hide-preview-row {
-  margin-top: 0;
-}
-/* Optional: ensure caret in preview row is always visible when closed */
-.hours-table tr.preview-row .hours-caret {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.5em;
-  transition: margin-left 0.3s;
-}
-
-.content-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.content-section .container.narrow {
-  margin-left: auto;
-  margin-right: auto;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
-/* FAQ page specific container width */
-body.faqs-page .content-section .container.narrow {
-  max-width: 900px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-@media (max-width: 800px) {
-  body.faqs-page .content-section .container.narrow {
-    max-width: 98vw;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-/* Decrease bottom margin for h3 headers only on the FAQ page */
-body.faqs-page .content-section .container.narrow h3 {
-  margin-bottom: 0.5rem;
-}
-
-/* Decrease the top margin for body text elements (excluding headings) only on the FAQ page */
-body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-  margin-top: 0.3em;
-}
-
-/* ==============================
-   13. FAQ Page Specific
-============================== */
-body.faqs-page .content-section .container.narrow {
-  max-width: 900px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-@media (max-width: 800px) {
-  body.faqs-page .content-section .container.narrow {
-    max-width: 98vw;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-/* Decrease bottom margin for h3 headers only on the FAQ page */
-body.faqs-page .content-section .container.narrow h3 {
-  margin-bottom: 0.5rem;
-}
-
-/* Decrease the top margin for body text elements (excluding headings) only on the FAQ page */
-body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-  margin-top: 0.3em;
-}
-
-/* ==============================
-   14. Hamburger Menu Styles
-============================== */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  margin-left: auto;
-  z-index: 1002;
-}
-@media (max-width: 700px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 1.2rem;
-    top: 1.2rem;
-  }
-  nav {
-    width: 100% !important;
-  }
-  #main-nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(26,26,26,0.98);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    padding: 0;
-    margin: 0;
-  }
-  #main-nav.open {
-    display: flex;
-  }
-  #main-nav li {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  #main-nav a {
-    display: block;
-    width: 100%;
-    padding: 1.1rem 0;
-    font-size: 1.2rem;
-    color: #fff;
-    background: none;
-    border-bottom: 1px solid #333;
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-  }
-  #main-nav a:last-child {
-    border-bottom: none;
-  }
-}
-
-/* ==============================
-   Animations
-============================== */
-@keyframes dropdown {
-  from {
-    opacity: 0;
-    transform: scaleY(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-@keyframes dropdown-close {
-  from {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  to {
-    opacity: 0;
-    transform: scaleY(0.95);
-  }
-}
-
-/* ===========================
-   Unified Page-Body Section
 =========================== */
 .page-body {
   background: #f9f9f9;
