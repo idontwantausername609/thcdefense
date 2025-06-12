@@ -402,17 +402,20 @@ nav a.active {
     padding: 0.5em 0.5em 0 0.5em;
   }
   .logo-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
-    text-align: left;
-    padding-left: 0.5em !important;
+    text-align: center !important;
+    padding-left: 0 !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
     font-size: 2rem;
     margin: 0.2em 0 0.3em 0;
     letter-spacing: 0.03em;
-    text-align: left !important;
+    text-align: center !important;
+    width: 100vw;
   }
   nav ul {
     flex-direction: column !important;
@@ -511,6 +514,14 @@ nav a.active {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
+  }
+  /* Highlight current nav link on mobile */
+  nav a.active {
+    background: #333 !important;
+    color: #ffd700 !important;
+    font-weight: bold !important;
+    border-left: 4px solid #ffd700 !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -826,17 +837,20 @@ footer {
     padding: 0.5em 0.5em 0 0.5em;
   }
   .logo-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
-    text-align: left;
-    padding-left: 0.5em !important;
+    text-align: center !important;
+    padding-left: 0 !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
     font-size: 2rem;
     margin: 0.2em 0 0.3em 0;
     letter-spacing: 0.03em;
-    text-align: left !important;
+    text-align: center !important;
+    width: 100vw;
   }
   nav ul {
     flex-direction: column !important;
@@ -935,6 +949,14 @@ footer {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
+  }
+  /* Highlight current nav link on mobile */
+  nav a.active {
+    background: #333 !important;
+    color: #ffd700 !important;
+    font-weight: bold !important;
+    border-left: 4px solid #ffd700 !important;
+    border-radius: 0 !important;
   }
 }
 
