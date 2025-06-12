@@ -361,7 +361,7 @@ nav a.active {
 }
 
 /* ==============================
-   7. Mobile Responsiveness
+   7. Mobile Responsiveness (All Mobile Styles Grouped
 ============================== */
 @media (max-width: 950px) {
   .cards {
@@ -379,12 +379,19 @@ nav a.active {
     border-radius: 0;
     border-top: none;
   }
+  .container.contact-grid {
+    max-width: 98vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    gap: 5vw;
+  }
 }
 
 @media (max-width: 700px) {
+  /* Header & Nav */
   header {
     display: block !important;
-    padding: 1.1rem 0 0.7rem 0 !important; /* More space above logo */
+    padding: 1.1rem 0 0.7rem 0 !important;
   }
   header .container {
     display: flex !important;
@@ -421,9 +428,11 @@ nav a.active {
     justify-content: center !important;
     width: 100% !important;
     background: #1a1a1a !important;
-    gap: 0.01rem !important; /* Even tighter vertical gap */
+    gap: 0.01rem !important;
     margin: 0 !important;
     padding: 0 !important;
+    left: 0 !important;
+    position: static !important;
   }
   nav li {
     width: 100% !important;
@@ -439,7 +448,7 @@ nav a.active {
     width: 100% !important;
     text-align: center !important;
     margin: 0 !important;
-    padding: 0.32rem 0 !important; /* Less vertical padding */
+    padding: 0.32rem 0 !important;
     font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
@@ -466,7 +475,7 @@ nav a.active {
   nav a:last-child {
     border-bottom: none !important;
   }
-  /* CONTACT FORM BUTTON */
+  /* Contact Form Button */
   .contact-form button, button, input[type="submit"] {
     display: block !important;
     width: 90vw !important;
@@ -492,7 +501,7 @@ nav a.active {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-  /* FOOTER */
+  /* Footer */
   footer {
     padding: 1.1rem 0.4rem 1rem 0.4rem !important;
     font-size: 0.95rem !important;
@@ -552,7 +561,18 @@ nav a.active {
     display: block !important;
     font-family: 'Cinzel', serif !important;
   }
-}
+  /* Contact grid (mobile) */
+  .container.contact-grid {
+    max-width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    gap: 1em;
+  }
+  /* Content section indentation (mobile) */
+  .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-left: 0.7em;
+  }
+} /* Properly close the @media (max-width: 700px) block */
 
 /* ==============================
    8. Contact Page Layout & Form
