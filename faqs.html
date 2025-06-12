@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-<body class="arrest-page">
+<body class="faqs-page">
 <header>
   <div class="container">
     <a href="index.html" class="logo-link">
@@ -15,11 +15,11 @@
 </a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="arrest-records.html">Arrest Records Explained</a></li>
-        <li><a href="marijuana-laws.html">Marijuana Laws</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link home-link">Home</a></li>
+        <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
+        <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
+        <li><a href="faqs.html" class="nav-link faqs-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -31,17 +31,51 @@
   </div>
 </section>
 <section class="content-section">
-  <div class="container narrow">
-    <h3>Do I need a lawyer if I haven’t been charged yet?</h3>
+  <div class="container narrow" style="margin-left: auto; margin-right: auto;">
+    <h3><b>Do I need a lawyer if I haven’t been charged yet?</b></h3>
     <p>Yes. Early intervention can protect your rights and sometimes prevent charges from being filed altogether.</p>
-    <h3>Will a marijuana arrest appear on my record?</h3>
+    
+    <h3><b>Will a marijuana arrest appear on my record?</b></h3>
     <p>Yes, unless it is sealed or expunged. Even dismissed cases will show up unless you take action to remove them.</p>
-    <h3>Can I be arrested for medical marijuana?</h3>
+    
+    <h3><b>Can I be arrested for medical marijuana?</b></h3>
     <p>Possibly. Texas has strict limitations, and non-approved medical use may still lead to arrest.</p>
-    <h3>How long does a nondisclosure or expunction take?</h3>
+    
+    <h3><b>How long does a nondisclosure or expunction take?</b></h3>
     <p>Most cases are resolved in 1 to 6 months, depending on the court and required documentation.</p>
-    <h3>What happens at a first court appearance?</h3>
-    <p>You’ll be informed of your charges, advised of rights, and asked to enter a plea. A lawyer can appear with or for you.</p>
+    
+    <h3><b>What happens at a first court appearance?</b></h3>
+    <p>You will be informed of your charges, advised of rights, and asked to enter a plea. A lawyer can appear with or for you.</p>
+   
+    <h3><b>What should I do if I’m stopped by police and questioned about marijuana?</b></h3>
+    <p>Stay calm, be polite, and exercise your right to remain silent. Do not consent to searches. Ask if you are free to leave.</p>
+  
+    <h3><b>Can a marijuana conviction affect my employment or education?</b></h3>
+    <p>Yes. Even minor convictions can impact job opportunities, professional licenses, and eligibility for student aid.</p>
+    
+    <h3><b>Is CBD legal in Texas?</b></h3>
+    <p>CBD products with less than 0.3% THC are legal, but products with higher THC content are not.</p>
+    
+    <h3><b>What’s the difference between possession and intent to distribute?</b></h3>
+    <p>Possession means you have marijuana for personal use. Intent to distribute involves evidence you planned to sell or share it, which carries harsher penalties.</p>
+    
+    <h3><b>Can I get my marijuana case dismissed?</b></h3>
+    <p>It’s possible, depending on the facts of your case, police conduct, and available defenses. We can help you explore your options.</p>
+    
+    <h3><b>Will I lose my driver’s license if convicted?</b></h3>
+    <p>A conviction for certain drug offenses can result in a driver’s license suspension.</p>
+   
+    <h3><b>How much marijuana is considered a felony in Texas?</b></h3>
+    <p>Possession of more than four ounces is typically charged as a felony.</p>
+    
+    <h3><b>What are my rights during a search of my car or home?</b></h3>
+    <p>You have the right to refuse consent to a search. Police generally need a warrant or probable cause.</p>
+    
+    <h3><b>Can juveniles be charged for marijuana offenses?</b></h3>
+    <p>Yes. Juveniles face different procedures, but charges can still have serious consequences.</p>
+   
+    <h3><b>How can I clear my record after a marijuana arrest?</b></h3>
+    <p>You may be eligible for expunction or nondisclosure. We can advise you on the process.</p>
   </div>
 </section>
 <footer>
@@ -54,9 +88,7 @@
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
       </a>
     </div>
-
-    <p>&copy; 2025 THCDefense.com – All Rights Reserved.</p>
-
+    <p>&copy; 2025 THCDefense.com – Your trusted Texas marijuana defense team.</p>
     <div class="footer-links">
       <a href="index.html">Home</a> |
       <a href="arrest-records.html">Arrest Records</a> |
@@ -66,5 +98,18 @@
     </div>
   </div>
 </footer>
+<script>
+  // Highlight current nav link
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

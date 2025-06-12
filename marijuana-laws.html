@@ -15,11 +15,11 @@
 </a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="arrest-records.html">Arrest Records Explained</a></li>
-        <li><a href="marijuana-laws.html">Marijuana Laws</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link home-link">Home</a></li>
+        <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
+        <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
+        <li><a href="faqs.html" class="nav-link faqs-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -32,26 +32,44 @@
 </section>
 <section class="content-section">
   <div class="container narrow">
-    <h3>Is Marijuana Legal in Texas?</h3>
+    <h3><b>Is Marijuana Legal in Texas?</b></h3>
     <p>No. Possession of marijuana remains illegal in Texas for recreational use. However, certain medical uses under the Compassionate Use Program are allowed in very limited circumstances.</p>
-    <h3>What Are the Penalties?</h3>
-    <p>Texas classifies marijuana possession by weight:
+
+    <h3><b>Medical Marijuana in Texas</b></h3>
+    <p>
+      Texas allows certain patients to use low-THC cannabis (no more than 1% THC by weight) through the 
+      <strong>
+        <a style="color:#4c4a4a;" href="https://statutes.capitol.texas.gov/Docs/OC/htm/OC.169.htm#169.003" target="_blank" rel="noopener">
+          <em>Compassionate Use Program</em>.
+        </a>
+      </strong>
+      To qualify, you must:
       <ul>
+        <li>Be a permanent resident of Texas</li>
+        <li>Have a qualifying medical condition such as epilepsy, seizure disorders, multiple sclerosis, spasticity, ALS, autism, cancer, PTSD, or an incurable neurodegenerative disease</li>
+        <li>Receive a prescription from a physician registered with the Compassionate Use Registry of Texas (CURT)</li>
+      </ul>
+      <p >Smoking medical marijuana is not allowed; products must be taken as an oil, tincture, or similar form.</p>
+    </p>
+
+    <h3><b>What Are the Penalties?</b></h3>
+    <p>Texas classifies marijuana possession by weight:
+      <ul class="body-font">
         <li>Under 2 oz: Class B misdemeanor (up to 180 days in jail and $2,000 fine)</li>
         <li>2–4 oz: Class A misdemeanor</li>
         <li>Over 4 oz: Felony charges, increasing by weight</li>
       </ul>
     </p>
-    <h3>What About CBD and Delta-8?</h3>
+    <h3><b>What About CBD and Delta-8?</b></h3>
     <p>CBD is legal if it contains less than 0.3% THC. Delta-8 exists in a gray area — some courts and prosecutors treat it as illegal, others don’t. Legal challenges are ongoing.</p>
-    <h3>Can I Be Charged for THC Vape Pens or Edibles?</h3>
+    <h3><b>Can I Be Charged for THC Vape Pens or Edibles?</b></h3>
     <p>Yes. Under Texas law, THC oil and edibles are considered controlled substances (penalty group 2), often resulting in felony charges — even for small amounts.</p>
-    <h3>What Does Federal Law Say?</h3>
+    <h3><b>What Does Federal Law Say?</b></h3>
     <p>Marijuana is still illegal under federal law. Federal charges are rare for individuals, but possession on federal land or airports can trigger enforcement.</p>
-    <h3>Is Legalization Coming?</h3>
+    <h3><b>Is Legalization Coming?</b></h3>
     <p>While national trends lean toward legalization, Texas has not passed meaningful recreational cannabis reform. Legislative efforts have failed repeatedly in recent sessions.</p>
-    <h3>What Should I Do If I’m Arrested?</h3>
-    <p>Do not admit guilt or discuss your case with police. Contact a defense attorney <b>immediately</b>. Your rights and record may still be protected.</p>
+    <h3><b>What Should I Do If I’m Arrested?</b></h3>
+    <p><b>Do not</b> admit guilt or discuss your case with police. Contact a defense attorney <b>immediately</b>. Your rights and record may still be protected.</p>
   </div>
 </section>
 <footer>
@@ -64,9 +82,7 @@
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
       </a>
     </div>
-
-    <p>&copy; 2025 THCDefense.com – All Rights Reserved.</p>
-
+    <p>&copy; 2025 THCDefense.com – Your trusted Texas marijuana defense team.</p>
     <div class="footer-links">
       <a href="index.html">Home</a> |
       <a href="arrest-records.html">Arrest Records</a> |
@@ -76,5 +92,18 @@
     </div>
   </div>
 </footer>
+<script>
+  // Highlight current nav link
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

@@ -9,7 +9,6 @@ body {
   font-size: 1rem;
 }
 
-/* Headings, nav, section titles: Cinzel */
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .welcome-block h2,
@@ -26,7 +25,18 @@ nav a {
 .card-text h3 {
   color: #191919;
   font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
+
+/* Add vertical offset to the 2nd and 3rd card headings for visual alignment */
+.cards .card:nth-child(3) .card-text h3 {
+  margin-top: 22px;
+}
+
 
 /* Body/copy text: Nunito Sans */
 p,
@@ -35,7 +45,12 @@ p,
 .hero-text p,
 .hero-contact-bar,
 .hero-contact-text,
-.hero-email-button {
+.hero-email-button,
+.welcome-block-cta a,
+.content-section a,
+.content-section strong a,
+.content-section em a,
+.content-section strong em a {
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -59,12 +74,12 @@ a:hover {
 }
 
 .container.narrow {
-  max-width: 950px;
-  margin: 2.5rem auto 0 auto;
+  max-width: 1200px;
+  margin: 1rem auto 2.5rem;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
-  padding: 2.5rem 2rem 0 2rem;
+  padding: 2.5rem;
 }
 
 /* ==============================
@@ -105,7 +120,6 @@ header h1 {
 
 .logo-link:hover h1 {
   text-decoration: none;
-  /* color: #bbb; */
 }
 
 nav {
@@ -129,8 +143,14 @@ nav a {
   font-weight: 500;
 }
 
-nav a:hover:not(.logo-link) {
+nav a:hover {
   color: #bbb;
+}
+
+nav a.active {
+  color: #bbb;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 /* ==============================
@@ -147,7 +167,7 @@ nav a:hover:not(.logo-link) {
   background-color: #e5e5e5;
   color: #1a1a1a;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .hero {
@@ -156,7 +176,6 @@ nav a:hover:not(.logo-link) {
   text-align: center;
   padding: 4rem 1rem;
   position: relative;
-  
 }
 
 .hero-text {
@@ -168,7 +187,7 @@ nav a:hover:not(.logo-link) {
 
 .hero-text h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   font-weight: bold;
   text-align: center;
   white-space: normal;
@@ -193,7 +212,7 @@ nav a:hover:not(.logo-link) {
   font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 1rem;
-  text-transform: uppercase;
+  text-transform: none; /* Remove uppercase transformation */
   font-family: 'Cinzel', serif;
 }
 
@@ -210,7 +229,7 @@ nav a:hover:not(.logo-link) {
 
 .hero-email-button {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   border: 2px solid #1a1a1a;
   padding: 0.6rem 1.5rem;
   text-decoration: none;
@@ -244,19 +263,24 @@ nav a:hover:not(.logo-link) {
 }
 .content-section h3 {
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
   max-width: 1400px;
 }
 
 .arrest-page .container.narrow h3 {
-  position: relative;
+  position: static;
   display: block;
-  width: 1200px;
-  margin: 2rem 1.rem;
-  left: 61%;
-  transform: translateX(-50%);
+  width: auto;
+  left: unset;
+  transform: none;
   font-size: 1.25rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.container.narrow h3:first-of-type {
+  margin-top: 0rem;
 }
 
 /* ==============================
@@ -269,62 +293,76 @@ nav a:hover:not(.logo-link) {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  gap: 0;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: stretch;
-  max-width: 1100px;
-  margin: 0 auto 2rem auto;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .card {
-  background: #f9f9f9;
-  border-left: 1px solid #e4e4e4;
-  border-right: 1px solid #e4e4e4;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 0;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 10px;
+  padding: 2.2rem 2rem 2.8rem 2rem;
+  min-width: 0;
+  min-height: 420px;
+  position: relative;
 }
 
-.card:first-child {
-  border-left: none;
-}
-
-.card:last-child {
-  border-right: none;
+.cards .card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: calc(-1.5rem - 1px);
+  width: 2px;
+  background: #e4e4e4;
+  /* REMOVE height property */
 }
 
 .card-text {
-  padding: 32px 22px;
-  text-align: center;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+  height: 100%;
 }
 
-.card-text h3 {
-  margin-top: 0;
-  margin-bottom: 22px;
-  font-size: 1.5em;
+.card-tagline-row {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 2.2rem;
+}
+
+.card-tagline {
   font-family: 'Cinzel', serif;
-  font-weight: 400;
-  letter-spacing: 0.10em;
-  color: #191919;
-  text-transform: capitalize;
-}
-
-.card-text p {
-  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.08rem;
+  color: #000000;
+  letter-spacing: 0.01em;
+  text-align: center;
   margin: 0;
-  font-size: 1.06rem;
-  line-height: 1.6;
-  color: #222;
 }
 
-/* MOBILE RESPONSIVENESS */
+.cards-cta {
+  margin-top: 3.5rem !important;
+  text-align: center;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 1.08rem;
+  max-width: 700px;
+}
+
+/* ==============================
+   Mobile Responsiveness
+============================== */
 @media (max-width: 950px) {
   .cards {
     grid-template-columns: 1fr;
@@ -345,7 +383,12 @@ nav a:hover:not(.logo-link) {
 
 @media (max-width: 700px) {
   .container.narrow {
-    padding: 1.2rem 0.4rem 0 0.4rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    max-width: 100vw;
+    width: 100vw;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-text h2 {
     white-space: normal;
@@ -460,7 +503,6 @@ nav a:hover:not(.logo-link) {
   text-decoration: none;
 }
 
-
 /* ==============================
    Hours Dropdown
 ============================== */
@@ -471,8 +513,8 @@ nav a:hover:not(.logo-link) {
 .hours-toggle-bar {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 1rem 0;
   cursor: pointer;
+  padding: 0.25rem;
   user-select: none;
 }
 
@@ -484,26 +526,59 @@ nav a:hover:not(.logo-link) {
   font-size: 1rem;
 }
 
-.hours-preview.hide {
-  visibility: hidden;
-}
+
 
 .hours-preview.hide .hours-caret {
   visibility: visible;
   display: block;
-  margin-top: 5px;
   text-align: center;
   position: relative;
 }
 
+/* Remove duplicate/conflicting .hours-caret and related rules, keep only one set for correct dropdown/caret behavior. */
 .hours-caret {
+  display: inline-block;
   transition: transform 0.3s ease;
-  visibility: visible !important;
 }
 
-.hours-caret.rotated {
+/* Remove .hours-caret rotation since it's hidden when open */
+/* .hours-toggle-bar.open .hours-caret {
   transform: rotate(180deg);
-  margin-left: auto;
+} */
+
+.hours-caret-table {
+  display: none;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  transition: margin-left 0.3s, transform 0.3s;
+}
+.hours-toggle-bar.open .hours-caret-table {
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+/* Remove .hours-caret.rotated rule, as it is now handled by .hours-toggle-bar.open .hours-caret for rotation. */
+
+/* .hours-caret.rotated {
+  transform: rotate(180deg);
+} */
+.hours-caret-table {
+  display: none;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  transition: margin-left 0.3s;
+}
+.hours-toggle-bar.open .hours-caret-table {
+  display: inline-block;
+}
+.hours-table tr.preview-row .hours-caret {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  transition: margin-left 0.3s;
 }
 
 .hours-table-wrapper {
@@ -519,18 +594,49 @@ nav a:hover:not(.logo-link) {
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
-  margin: 0.5rem 0;
 }
 
 .hours-table td {
-  padding: 0.4rem 0;
+  padding: inherit;
   width: 50%;
+  line-height: 2rem;
 }
 
 .hours-table tr.today td {
   font-weight: bold;
 }
 
+/* --- FIX: Only bold the correct day row, not the preview row --- */
+.hours-table tr.today:not(.preview-row) td {
+  font-weight: bold;
+}
+.hours-table tr.preview-row td {
+  font-weight: normal !important;
+}
+
+.hours-preview-row {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding: 0.4rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  /* Restore consistent spacing with table rows */
+  gap: 0;
+}
+.hours-preview-row > span {
+  flex: 1 1 0;
+  text-align: left;
+  padding-left: 0;
+  /* Add spacing between columns to match .hours-table td */
+  padding-right: 0;
+}
+.hours-preview-row .hours-caret {
+  flex: 0 0 auto;
+  margin-left: 0.5em;
+}
 
 /* ==============================
    Footer
@@ -565,7 +671,7 @@ footer {
 }
 
 .footer-icons {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .footer-icons img {
@@ -578,31 +684,6 @@ footer {
 
 .footer-icons img:hover {
   opacity: 0.7;
-}
-
-/* ==============================
-   Responsive Design for Navigation and Contact
-============================== */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .contact-grid {
-    flex-direction: column;
-  }
-}
-
-/* --------------------------------
-   Responsive: Hero Heading Wraps
--------------------------------- */
-@media (max-width: 700px) {
-  .hero-text h2 {
-    white-space: normal;
-    font-size: 1.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 /* ==============================
@@ -636,12 +717,7 @@ footer {
   background: #f9f9f9;
   padding: 0;
 }
-.container.narrow {
-  max-width: 950px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 2.5rem 2rem;
-}
+
 .welcome-block {
   margin-bottom: 3.5rem;
   text-align: center;
@@ -649,7 +725,8 @@ footer {
 .welcome-block h2 {
   font-family: 'Cinzel', serif;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.75rem;
+  margin-top: 0.75rem;
   font-weight: bold;
 }
 .welcome-block p {
@@ -665,4 +742,157 @@ footer {
   font-size: 2rem;
   margin-bottom: 2.5rem;
   text-align: center;
+}
+
+.legal-cite {
+  font-size: 0.92rem;
+  color: #4c4a4a;
+  font-style: italic;
+}
+
+.body-font {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.content-section ul,
+.content-section ul.body-font,
+.content-section li,
+.content-section li.body-font {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif !important;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+}
+
+/* Indent body text in content-section, but not headings */
+.content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-left: 1.5em;
+}
+
+/* Remove left margin from headings in content-section */
+.content-section h2,
+.content-section h3,
+.content-section h4,
+.content-section h5,
+.content-section h6 {
+  margin-left: 0;
+}
+
+/* Responsive: keep indentation on mobile */
+@media (max-width: 700px) {
+  .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-left: 0.7em;
+  }
+}
+
+/* Increase line spacing for body text */
+body,
+.content-section p,
+.content-section ul,
+.content-section li {
+  line-height: 1.5rem;
+}
+
+/* Contact page specific styles moved from contact.html */
+.container.contact-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  gap: 8vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@media (max-width: 950px) {
+  .container.contact-grid {
+    max-width: 98vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    gap: 5vw;
+  }
+}
+@media (max-width: 700px) {
+  .container.contact-grid {
+    max-width: 100vw;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    gap: 1em;
+  }
+}
+
+/* Hide caret in preview when open */
+/* REMOVE or comment out this rule:
+.hours-toggle-bar.open .hours-caret {
+  display: none !important;
+}
+*/
+
+.hours-caret-table {
+  display: none;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  transition: margin-left 0.3s;
+}
+.hours-toggle-bar.open .hours-caret-table {
+  display: inline-block;
+}
+/* Always show the preview row unless dropdown is open */
+.hours-table tr.preview-row {
+  display: table-row;
+}
+.hours-table.hide-preview-row tr.preview-row {
+  display: none;
+}
+/* Remove extra space above the table when preview row is hidden */
+.hours-table.hide-preview-row {
+  margin-top: 0;
+}
+/* Optional: ensure caret in preview row is always visible when closed */
+.hours-table tr.preview-row .hours-caret {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  transition: margin-left 0.3s;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.content-section .container.narrow {
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* FAQ page specific container width */
+body.faqs-page .content-section .container.narrow {
+  max-width: 900px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (max-width: 800px) {
+  body.faqs-page .content-section .container.narrow {
+    max-width: 98vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Decrease bottom margin for h3 headers only on the FAQ page */
+body.faqs-page .content-section .container.narrow h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Decrease the top margin for body text elements (excluding headings) only on the FAQ page */
+body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-top: 0.3em;
 }
