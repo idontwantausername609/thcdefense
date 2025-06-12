@@ -430,7 +430,7 @@ nav a.active {
     display: flex !important;
   }
   nav li {
-    width: auto !important;
+    width: 100vw !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -439,12 +439,9 @@ nav a.active {
     align-items: center !important;
   }
   nav a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: auto !important;
-    min-width: 60vw !important;
-    margin: 0.2rem auto !important;
+    display: block !important;
+    width: 100vw !important;
+    margin: 0 !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -452,6 +449,8 @@ nav a.active {
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
     text-align: center !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
   }
   nav a.active {
     background: #333 !important;
@@ -459,6 +458,9 @@ nav a.active {
     font-weight: bold !important;
     border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
+  }
+  nav a:last-child {
+    border-bottom: none !important;
   }
   .logo-link, .logo-link h1 {
     display: flex !important;
@@ -488,18 +490,17 @@ nav a.active {
     margin: 1rem 0 0 0 !important;
   }
   .footer-links a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: auto !important;
-    min-width: 60vw !important;
-    margin: 0.2rem auto !important;
+    display: block !important;
+    width: 100vw !important;
+    margin: 0 !important;
     font-size: 1.15rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
     text-align: center !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
   }
   .footer-icons {
     display: flex !important;
@@ -514,11 +515,12 @@ nav a.active {
     height: 36px !important;
     margin: 0 0.3rem !important;
   }
-  footer p {
+  footer p, .footer-content p {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
     font-size: 1.05rem !important;
+    display: block !important;
   }
 }
 
@@ -862,7 +864,7 @@ footer {
     display: flex !important;
   }
   nav li {
-    width: auto !important;
+    width: 100vw !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -871,12 +873,9 @@ footer {
     align-items: center !important;
   }
   nav a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: auto !important;
-    min-width: 60vw !important;
-    margin: 0.2rem auto !important;
+    display: block !important;
+    width: 100vw !important;
+    margin: 0 !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -884,6 +883,8 @@ footer {
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
     text-align: center !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
   }
   nav a.active {
     background: #333 !important;
@@ -891,6 +892,9 @@ footer {
     font-weight: bold !important;
     border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
+  }
+  nav a:last-child {
+    border-bottom: none !important;
   }
   .logo-link, .logo-link h1 {
     display: flex !important;
@@ -920,18 +924,17 @@ footer {
     margin: 1rem 0 0 0 !important;
   }
   .footer-links a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: auto !important;
-    min-width: 60vw !important;
-    margin: 0.2rem auto !important;
+    display: block !important;
+    width: 100vw !important;
+    margin: 0 !important;
     font-size: 1.15rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
     text-align: center !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
   }
   .footer-icons {
     display: flex !important;
@@ -946,11 +949,12 @@ footer {
     height: 36px !important;
     margin: 0 0.3rem !important;
   }
-  footer p {
+  footer p, .footer-content p {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
     font-size: 1.05rem !important;
+    display: block !important;
   }
 }
 
