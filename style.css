@@ -441,7 +441,7 @@ nav a.active {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    width: 100vw !important;
     margin: 0 !important;
     padding: 0.6rem 0 !important;
     font-size: 1.1rem !important;
@@ -472,6 +472,35 @@ nav a.active {
     text-align: center !important;
     margin: 0 auto 0.2em auto !important;
   }
+
+  /* CONTACT FORM BUTTON */
+  .contact-form button, button, input[type="submit"] {
+    display: block !important;
+    width: 90vw !important;
+    max-width: 350px !important;
+    margin: 1.2em auto 0 auto !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    background: #222 !important;
+    border: 2px solid #222 !important;
+    border-radius: 30px !important;
+    padding: 0.7em 1.5em !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
+  }
+  .contact-form button:hover, button:hover, input[type="submit"]:hover {
+    background: #444 !important;
+    color: #fff !important;
+  }
+  .contact-form button[disabled], button[disabled], input[type="submit"][disabled] {
+    opacity: 0.6 !important;
+    color: #fff !important;
+  }
+
+  /* FOOTER */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -495,7 +524,7 @@ nav a.active {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    width: 100vw !important;
     margin: 0 !important;
     font-size: 1.1rem !important;
     padding: 0.6rem 0 !important;
@@ -881,7 +910,7 @@ footer {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    width: 100vw !important;
     margin: 0 !important;
     padding: 0.6rem 0 !important;
     font-size: 1.1rem !important;
@@ -912,6 +941,35 @@ footer {
     text-align: center !important;
     margin: 0 auto 0.2em auto !important;
   }
+
+  /* CONTACT FORM BUTTON */
+  .contact-form button, button, input[type="submit"] {
+    display: block !important;
+    width: 90vw !important;
+    max-width: 350px !important;
+    margin: 1.2em auto 0 auto !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    background: #222 !important;
+    border: 2px solid #222 !important;
+    border-radius: 30px !important;
+    padding: 0.7em 1.5em !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
+  }
+  .contact-form button:hover, button:hover, input[type="submit"]:hover {
+    background: #444 !important;
+    color: #fff !important;
+  }
+  .contact-form button[disabled], button[disabled], input[type="submit"][disabled] {
+    opacity: 0.6 !important;
+    color: #fff !important;
+  }
+
+  /* FOOTER */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -935,7 +993,7 @@ footer {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    width: 100vw !important;
     margin: 0 !important;
     font-size: 1.1rem !important;
     padding: 0.6rem 0 !important;
