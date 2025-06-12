@@ -429,6 +429,7 @@ nav a.active {
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
+    display: flex !important;
   }
   nav li {
     width: 100vw !important;
@@ -440,7 +441,9 @@ nav a.active {
     align-items: center !important;
   }
   nav a {
-    display: block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 90vw !important;
     margin: 0 auto !important;
     padding: 0.6rem 0 !important;
@@ -458,31 +461,14 @@ nav a.active {
     border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
   }
-  nav a:last-child {
-    border-bottom: none !important;
-  }
-  /* Contact form button fix */
-  button, input[type="submit"] {
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
-    color: #fff !important;
-    background: #222 !important;
-    border: 2px solid #222 !important;
-    border-radius: 30px !important;
-    padding: 0.7em 1.5em !important;
-    margin: 1.2em auto 0 auto !important;
-    display: block !important;
-    width: 90vw !important;
-    max-width: 350px !important;
+  .logo-link, .logo-link h1 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100vw !important;
     text-align: center !important;
-    opacity: 1 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 0 auto 0.2em auto !important;
   }
-  button[disabled], input[type="submit"][disabled] {
-    opacity: 0.6 !important;
-    color: #fff !important;
-  }
-  /* Center all footer content and make links/icons larger and centered */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -492,6 +478,28 @@ nav a.active {
     width: 100vw !important;
     margin: 0 auto !important;
     padding: 0 !important;
+  }
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100vw !important;
+    gap: 0.7rem !important;
+    margin: 1rem 0 0 0 !important;
+  }
+  .footer-links a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0.2rem auto !important;
+    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
+    color: #fff !important;
+    background: #222 !important;
+    border-radius: 6px !important;
+    width: 90vw !important;
+    text-align: center !important;
   }
   .footer-icons {
     display: flex !important;
@@ -505,26 +513,6 @@ nav a.active {
     width: 36px !important;
     height: 36px !important;
     margin: 0 0.3rem !important;
-  }
-  .footer-links {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100vw !important;
-    gap: 0.7rem !important;
-    margin: 1rem 0 0 0 !important;
-  }
-  .footer-links a {
-    display: block !important;
-    margin: 0.2rem auto !important;
-    font-size: 1.15rem !important;
-    padding: 0.6rem 0 !important;
-    color: #fff !important;
-    background: #222 !important;
-    border-radius: 6px !important;
-    width: 90vw !important;
-    text-align: center !important;
   }
   footer p {
     text-align: center !important;
@@ -873,6 +861,7 @@ footer {
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
+    display: flex !important;
   }
   nav li {
     width: 100vw !important;
@@ -884,7 +873,9 @@ footer {
     align-items: center !important;
   }
   nav a {
-    display: block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 90vw !important;
     margin: 0 auto !important;
     padding: 0.6rem 0 !important;
@@ -902,31 +893,14 @@ footer {
     border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
   }
-  nav a:last-child {
-    border-bottom: none !important;
-  }
-  /* Contact form button fix */
-  button, input[type="submit"] {
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
-    color: #fff !important;
-    background: #222 !important;
-    border: 2px solid #222 !important;
-    border-radius: 30px !important;
-    padding: 0.7em 1.5em !important;
-    margin: 1.2em auto 0 auto !important;
-    display: block !important;
-    width: 90vw !important;
-    max-width: 350px !important;
+  .logo-link, .logo-link h1 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100vw !important;
     text-align: center !important;
-    opacity: 1 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 0 auto 0.2em auto !important;
   }
-  button[disabled], input[type="submit"][disabled] {
-    opacity: 0.6 !important;
-    color: #fff !important;
-  }
-  /* Center all footer content and make links/icons larger and centered */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -936,6 +910,28 @@ footer {
     width: 100vw !important;
     margin: 0 auto !important;
     padding: 0 !important;
+  }
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100vw !important;
+    gap: 0.7rem !important;
+    margin: 1rem 0 0 0 !important;
+  }
+  .footer-links a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0.2rem auto !important;
+    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
+    color: #fff !important;
+    background: #222 !important;
+    border-radius: 6px !important;
+    width: 90vw !important;
+    text-align: center !important;
   }
   .footer-icons {
     display: flex !important;
@@ -949,26 +945,6 @@ footer {
     width: 36px !important;
     height: 36px !important;
     margin: 0 0.3rem !important;
-  }
-  .footer-links {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100vw !important;
-    gap: 0.7rem !important;
-    margin: 1rem 0 0 0 !important;
-  }
-  .footer-links a {
-    display: block !important;
-    margin: 0.2rem auto !important;
-    font-size: 1.15rem !important;
-    padding: 0.6rem 0 !important;
-    color: #fff !important;
-    background: #222 !important;
-    border-radius: 6px !important;
-    width: 90vw !important;
-    text-align: center !important;
   }
   footer p {
     text-align: center !important;
