@@ -549,15 +549,15 @@ nav a.active {
     gap: 1rem !important;
   }
   .footer-icons img {
-    width: 26px !important;
-    height: 26px !important;
+    width: 24px !important;
+    height: 24px !important;
     margin: 0 0.15rem !important;
   }
   footer p, .footer-content p {
     text-align: center !important;
     width: 100% !important;
     margin: 0.5rem 0 0 0 !important;
-    font-size: 0.95rem !important;
+    font-size: 0.65rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
   }
@@ -1051,7 +1051,7 @@ body,
 @media (max-width: 700px) {
   footer {
     padding: 2rem 0.5rem 1.5rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.65rem;
     line-height: 1;
   }
   .footer-links {
@@ -1063,7 +1063,7 @@ body,
   .footer-links a {
     display: block;
     margin: 0.2rem 0;
-    font-size: 1rem;
+    font-size: 0.65rem;
     padding: 0.5rem 0;
   }
   .footer-icons {
@@ -1072,11 +1072,7 @@ body,
     justify-content: center;
     gap: 1.2rem;
   }
-  .footer-icons img {
-    width: 32px;
-    height: 32px;
-    margin: 0 0.2rem;
-  }
+  
   nav ul {
     flex-direction: column !important;
     align-items: center !important;
