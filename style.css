@@ -405,7 +405,7 @@ nav a.active {
     display: block;
     width: 100vw;
     text-align: left;
-    padding-left: 2em !important;
+    padding-left: 0.5em !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
@@ -486,11 +486,6 @@ nav a.active {
     width: 100vw !important;
     margin: 1rem 0 0 0 !important;
     gap: 1.2rem !important;
-  }
-  footer .footer-icons a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
   footer .footer-links {
     display: flex !important;
@@ -834,7 +829,7 @@ footer {
     display: block;
     width: 100vw;
     text-align: left;
-    padding-left: 2em !important;
+    padding-left: 0.5em !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
@@ -915,11 +910,6 @@ footer {
     width: 100vw !important;
     margin: 1rem 0 0 0 !important;
     gap: 1.2rem !important;
-  }
-  footer .footer-icons a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
   footer .footer-links {
     display: flex !important;
