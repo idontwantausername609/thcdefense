@@ -391,15 +391,15 @@ nav a.active {
   /* Header & Nav */
   header {
     display: block !important;
-    padding: 1.1rem 0 0.7rem 0 !important;
+    padding: 0.7rem 0 0 0 !important;
   }
   header .container {
-    display: flex !important;
+    /* display: flex !important; */
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 90vw !important;
-    padding: 0 !important;
+    width: inherit !important;
+    /* padding: 0 !important; */
   }
   .logo-link {
     display: flex !important;
@@ -413,8 +413,8 @@ nav a.active {
     letter-spacing: 0.03em !important;
   }
   nav {
-    width: 90vw !important;
-    display: flex !important;
+    /* width: 700px !important; */
+    /* display: flex !important; */
     justify-content: center !important;
     align-items: center !important;
   }
@@ -423,7 +423,7 @@ nav a.active {
   nav a {
     display: flex !important;
     letter-spacing: 0.02em !important;
-    line-height: 1.05rem !important;
+    line-height: 1rem !important;
   }
   nav a.active {
     background: #333 !important;
@@ -512,7 +512,7 @@ nav a.active {
   footer p, .footer-content p {
     text-align: center !important;
     width: 100% !important;
-    margin: 0.5rem 0 0 0 !important;
+    margin: 0.5rem 0 !important;
     font-size: 0.65rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
@@ -1011,7 +1011,7 @@ body,
   }
 
   nav a {
-    padding: 0.6rem 0 !important;
+    padding: 0.5rem 0 !important;
     font-size: 0.95rem !important;
   }
   /* Card Section: Stack cards vertically and remove horizontal gaps */
