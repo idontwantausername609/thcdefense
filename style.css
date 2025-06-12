@@ -431,19 +431,14 @@ nav a.active {
     margin: 0 !important;
     padding: 0 !important;
   }
-  nav li {
-    width: 100vw !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
   nav a {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100vw !important;
     text-align: center !important;
     margin: 0 !important;
-    padding: 0.7rem 0 !important;
+    padding: 0.9rem 0 !important;
     font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
@@ -452,6 +447,7 @@ nav a.active {
     font-weight: 400 !important;
     box-sizing: border-box !important;
     letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
   }
   nav a.active {
     background: #333 !important;
@@ -462,7 +458,9 @@ nav a.active {
     border-radius: 0 !important;
     width: 100vw !important;
     text-align: center !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   nav a:last-child {
     border-bottom: none !important;
@@ -898,20 +896,14 @@ footer {
     margin: 0 !important;
     padding: 0 !important;
   }
-  /* Removed conflicting nav li and nav a rules here to preserve full-width centering from earlier block */
-  /* nav li {
-    width: 100vw !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
   nav a {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100vw !important;
     text-align: center !important;
     margin: 0 !important;
-    padding: 0.7rem 0 !important;
+    padding: 0.9rem 0 !important;
     font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
@@ -920,6 +912,7 @@ footer {
     font-weight: 400 !important;
     box-sizing: border-box !important;
     letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
   }
   nav a.active {
     background: #333 !important;
@@ -930,11 +923,13 @@ footer {
     border-radius: 0 !important;
     width: 100vw !important;
     text-align: center !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   nav a:last-child {
     border-bottom: none !important;
-  } */
+  }
 
   /* CONTACT FORM BUTTON */
   .contact-form button, button, input[type="submit"] {
@@ -1366,20 +1361,14 @@ footer {
     margin: 0 !important;
     padding: 0 !important;
   }
-  /* Removed conflicting nav li and nav a rules here to preserve full-width centering from earlier block */
-  /* nav li {
-    width: 100vw !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
   nav a {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100vw !important;
     text-align: center !important;
     margin: 0 !important;
-    padding: 0.7rem 0 !important;
+    padding: 0.9rem 0 !important;
     font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
@@ -1388,6 +1377,7 @@ footer {
     font-weight: 400 !important;
     box-sizing: border-box !important;
     letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
   }
   nav a.active {
     background: #333 !important;
@@ -1398,11 +1388,13 @@ footer {
     border-radius: 0 !important;
     width: 100vw !important;
     text-align: center !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   nav a:last-child {
     border-bottom: none !important;
-  } */
+  }
 
   /* CONTACT FORM BUTTON */
   .contact-form button, button, input[type="submit"] {
@@ -1755,7 +1747,9 @@ body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):no
     padding: 0 !important;
   }
   nav a {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
@@ -1892,7 +1886,9 @@ body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):no
     padding: 0 !important;
   }
   nav a {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
