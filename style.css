@@ -405,16 +405,12 @@ nav a.active {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    /* width: 100% !important; */
-    /* text-align: center !important; */
     margin-bottom: 0.2em !important;
   }
   .logo-link h1 {
     font-size: 2rem !important;
     margin: 0.2em 0 0.3em 0 !important;
     letter-spacing: 0.03em !important;
-    /* text-align: center !important; */
-    /* width: 100% !important; */
   }
   nav {
     width: 90vw !important;
@@ -422,40 +418,10 @@ nav a.active {
     justify-content: center !important;
     align-items: center !important;
   }
-  nav ul {
-    /* flex-direction: column !important; */
-    /* align-items: center !important; */
-    /* justify-content: center !important; */
-    /* width: 100% !important; */
-    /* background: #1a1a1a !important; */
-    /* gap: 0.01rem !important; */
-    /* margin: 0 !important; */
-    /* padding: 0 !important; */
-    /* left: 0 !important; */
-    /* position: static !important; */
-  }
-  nav li {
-    /* width: 100% !important; */
-    /* text-align: center !important; */
-    /* margin: 0 !important; */
-    /* padding: 0 !important; */
-    /* display: block !important; */
-  }
+
+
   nav a {
     display: flex !important;
-    /* align-items: center !important; */
-    /* justify-content: center !important; */
-    /* width: 100% !important; */
-    /* text-align: center !important; */
-    /* margin: 0 !important; */
-    /* padding: 0.32rem 0 !important; */
-    /* font-size: 1.13rem !important; */
-    /* border-bottom: 1px solid #222 !important; */
-    /* color: #f8f8f8 !important; */
-    /* background: #1a1a1a !important; */
-    /* font-family: 'Cinzel', serif !important; */
-    /* font-weight: 400 !important; */
-    /* box-sizing: border-box !important; */
     letter-spacing: 0.02em !important;
     line-height: 1.05rem !important;
   }
@@ -463,9 +429,6 @@ nav a.active {
     background: #333 !important;
     color: #fff !important;
     font-weight: bold !important;
-    /* border-left: none !important; */
-    /* border-bottom: 2px solid #bbb !important; */
-    /* border-radius: 0 !important; */
     width: 100vw !important;
     text-align: center !important;
     display: flex !important;
@@ -504,24 +467,17 @@ nav a.active {
   /* Footer */
   footer {
     padding: 1rem 0.4rem!important;
-    /* font-size: 0.95rem !important; */
     line-height: 1.25 !important;
   }
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
-    /* align-items: center !important; */
-    /* justify-content: center !important; */
-    /* text-align: center !important; */
-    /* width: 100% !important; */
-    /* margin: 0 auto !important; */
     padding: 0 !important;
   }
   .footer-links {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    /* text-align: center !important; */
     width: 100% !important;
     gap: 0.3rem !important;
     margin: 0.5rem 0 0 0 !important;
@@ -698,8 +654,6 @@ nav a.active {
   font-size: 1rem;
 }
 
-
-
 .hours-preview.hide .hours-caret {
   visibility: visible;
   display: block;
@@ -712,11 +666,6 @@ nav a.active {
   display: inline-block;
   transition: transform 0.3s ease;
 }
-
-/* Remove .hours-caret rotation since it's hidden when open */
-/* .hours-toggle-bar.open .hours-caret {
-  transform: rotate(180deg);
-} */
 
 .hours-caret-table {
   display: none;
@@ -731,11 +680,6 @@ nav a.active {
   transition: transform 0.3s;
 }
 
-/* Remove .hours-caret.rotated rule, as it is now handled by .hours-toggle-bar.open .hours-caret for rotation. */
-
-/* .hours-caret.rotated {
-  transform: rotate(180deg);
-} */
 .hours-caret-table {
   display: none;
   font-size: 1.2em;
@@ -996,13 +940,6 @@ body,
   }
 }
 
-/* Hide caret in preview when open */
-/* REMOVE or comment out this rule:
-.hours-toggle-bar.open .hours-caret {
-  display: none !important;
-}
-*/
-
 .hours-caret-table {
   display: none;
   font-size: 1.2em;
@@ -1049,23 +986,14 @@ body,
    Mobile Accessibility & Footer Improvements
 ============================== */
 @media (max-width: 700px) {
-  footer {
-    /* padding: 2rem 0.5rem 1.5rem 0.5rem; */
-    /* font-size: 0.65rem; */
-    /* line-height: 1; */
-  }
+
   .footer-links {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     margin-top: 1rem;
   }
-  .footer-links a {
-    /* display: block; */
-    /* margin: 0.2rem 0; */
-    /* font-size: 0.65rem; */
-    /* padding: 0.5rem 0; */
-  }
+
   .footer-icons {
     margin-top: 1rem;
     display: flex;
@@ -1077,28 +1005,14 @@ body,
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    /* width: 100% !important; */
-    /* left: 0 !important; */
-    /* position: static !important; */
     background: #1a1a1a !important;
     padding: 0.2rem 0 !important;
-    /* margin: 0 !important; */
     gap: 0 !important;
   }
-  nav li {
-    /* width: auto !important; */
-    /* text-align: center !important; */
-    /* margin: 0 !important; */
-    /* padding: 0 !important; */
-  }
+
   nav a {
-    /* display: flex !important; */
-    /* align-items: center !important; */
-    /* justify-content: center !important; */
-    /* width: auto !important; */
     padding: 0.6rem 0 !important;
     font-size: 0.95rem !important;
-    /* border-bottom: 1px solid #222; */
   }
   /* Card Section: Stack cards vertically and remove horizontal gaps */
   .cards {
