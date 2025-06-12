@@ -14,7 +14,6 @@
     <a href="index.html" class="logo-link">
       <h1>THC Defense</h1>
     </a>
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <nav>
       <ul id="main-nav">
         <li><a href="index.html" class="nav-link home-link">Home</a></li>
@@ -128,23 +127,6 @@
       }
     });
   })();
-
-  // Hamburger menu toggle
-  const hamburger = document.querySelector('.hamburger');
-  const mainNav = document.getElementById('main-nav');
-  if (hamburger && mainNav) {
-    hamburger.addEventListener('click', function() {
-      const isOpen = mainNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    // Optional: close menu when a link is clicked
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
 </script>
 </body>
 </html>
