@@ -422,17 +422,15 @@ nav a.active {
     align-items: center !important;
     justify-content: center !important;
     width: 100vw !important;
-    left: 0 !important;
-    position: static !important;
     background: #1a1a1a !important;
-    padding: 0.2rem 0 0.2rem 0 !important;
+    padding: 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
     display: flex !important;
   }
   nav li {
-    width: 100vw !important;
+    width: auto !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -444,8 +442,9 @@ nav a.active {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 90vw !important;
-    margin: 0 auto !important;
+    width: auto !important;
+    min-width: 60vw !important;
+    margin: 0.2rem auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -492,13 +491,14 @@ nav a.active {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: auto !important;
+    min-width: 60vw !important;
     margin: 0.2rem auto !important;
     font-size: 1.15rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
-    width: 90vw !important;
     text-align: center !important;
   }
   .footer-icons {
@@ -854,17 +854,15 @@ footer {
     align-items: center !important;
     justify-content: center !important;
     width: 100vw !important;
-    left: 0 !important;
-    position: static !important;
     background: #1a1a1a !important;
-    padding: 0.2rem 0 0.2rem 0 !important;
+    padding: 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
     display: flex !important;
   }
   nav li {
-    width: 100vw !important;
+    width: auto !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -876,8 +874,9 @@ footer {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 90vw !important;
-    margin: 0 auto !important;
+    width: auto !important;
+    min-width: 60vw !important;
+    margin: 0.2rem auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -924,13 +923,14 @@ footer {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: auto !important;
+    min-width: 60vw !important;
     margin: 0.2rem auto !important;
     font-size: 1.15rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
-    width: 90vw !important;
     text-align: center !important;
   }
   .footer-icons {
@@ -1210,14 +1210,14 @@ body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):no
     gap: 0 !important;
   }
   nav li {
-    width: 100vw !important;
+    width: auto !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
   }
   nav a {
     display: block !important;
-    width: 100vw !important;
+    width: auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
