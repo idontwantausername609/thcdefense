@@ -365,19 +365,19 @@ nav a.active {
 ============================== */
 @media (max-width: 950px) {
   .cards {
-    grid-template-columns: 1fr;
-    max-width: 95vw;
+    /* grid-template-columns: 1fr; */
+    /* max-width: 95vw; */
   }
   .card {
-    border-left: none;
-    border-right: none;
+    /* border-left: none; */
+    /* border-right: none; */
     border-top: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
     border-radius: 0;
   }
   .card:first-child, .card:last-child {
-    border-radius: 0;
-    border-top: none;
+    /* border-radius: 0; */
+    /* border-top: none; */
   }
   .container.contact-grid {
     max-width: 98vw;
@@ -391,15 +391,15 @@ nav a.active {
   /* Header & Nav */
   header {
     display: block !important;
-    padding: 0.7rem 0 0 0 !important;
+    padding: 1.1rem 0 0.7rem 0 !important;
   }
   header .container {
-    /* display: flex !important; */
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: inherit !important;
-    /* padding: 0 !important; */
+    width: 90vw !important;
+    padding: 0 !important;
   }
   .logo-link {
     display: flex !important;
@@ -413,8 +413,8 @@ nav a.active {
     letter-spacing: 0.03em !important;
   }
   nav {
-    /* width: 700px !important; */
-    /* display: flex !important; */
+    width: 90vw !important;
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
@@ -423,7 +423,7 @@ nav a.active {
   nav a {
     display: flex !important;
     letter-spacing: 0.02em !important;
-    line-height: 1rem !important;
+    line-height: 1.05rem !important;
   }
   nav a.active {
     background: #333 !important;
@@ -512,7 +512,7 @@ nav a.active {
   footer p, .footer-content p {
     text-align: center !important;
     width: 100% !important;
-    margin: 0.5rem 0 !important;
+    margin: 0.5rem 0 0 0 !important;
     font-size: 0.65rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
@@ -1011,24 +1011,24 @@ body,
   }
 
   nav a {
-    padding: 0.5rem 0 !important;
+    padding: 0.6rem 0 !important;
     font-size: 0.95rem !important;
   }
   /* Card Section: Stack cards vertically and remove horizontal gaps */
   .cards {
-    display: flex !important;
+    /* display: grid !important; */
     flex-direction: column !important;
     gap: 0 !important;
-    width: 100% !important;
-    margin-bottom: 1.5rem !important;
-    box-sizing: border-box !important;
+    /* width: 100% !important; */
+    margin-bottom: 0 !important;
+    /* box-sizing: border-box !important; */
   }
   .card {
-    width: 100% !important;
-    flex: none !important;
+    /* width: 100% !important; */
+    /* flex: none !important; */
     min-width: 0 !important;
     min-height: unset !important;
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
     border-left: none !important;
     border-right: none !important;
     border-top: 1px solid #e4e4e4 !important;
@@ -1037,7 +1037,7 @@ body,
     padding: 1.2rem 0.7rem 1.7rem 0.7rem !important;
     box-sizing: border-box !important;
     position: static !important;
-    display: block !important;
+    /* display: block !important; */
   }
   .cards .card:not(:last-child)::after {
     display: none !important;
