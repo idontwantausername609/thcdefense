@@ -420,7 +420,7 @@ nav a.active {
   nav ul {
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     width: 100vw !important;
     left: 0 !important;
     position: static !important;
@@ -435,10 +435,13 @@ nav a.active {
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   nav a {
     display: block !important;
-    width: 100vw !important;
+    width: 90vw !important;
+    margin: 0 auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -471,7 +474,7 @@ nav a.active {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-  /* Center all footer content */
+  /* Center all footer content and make links/icons larger and centered */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -482,15 +485,20 @@ nav a.active {
     margin: 0 auto !important;
     padding: 0 !important;
   }
-  footer .footer-icons {
+  .footer-icons {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100vw !important;
     margin: 1rem 0 0 0 !important;
-    gap: 1.2rem !important;
+    gap: 1.5rem !important;
   }
-  footer .footer-links {
+  .footer-icons img {
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 0.3rem !important;
+  }
+  .footer-links {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -499,11 +507,11 @@ nav a.active {
     gap: 0.7rem !important;
     margin: 1rem 0 0 0 !important;
   }
-  footer .footer-links a {
+  .footer-links a {
     display: block !important;
     margin: 0.2rem auto !important;
-    font-size: 1.1rem !important;
-    padding: 0.5rem 0 !important;
+    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
@@ -514,14 +522,7 @@ nav a.active {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
-  }
-  /* Highlight current nav link on mobile */
-  nav a.active {
-    background: #333 !important;
-    color: inherit !important;
-    font-weight: bold !important;
-    border-left: 4px solid #bbb !important;
-    border-radius: 0 !important;
+    font-size: 1.05rem !important;
   }
 }
 
@@ -855,7 +856,7 @@ footer {
   nav ul {
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     width: 100vw !important;
     left: 0 !important;
     position: static !important;
@@ -870,10 +871,13 @@ footer {
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   nav a {
     display: block !important;
-    width: 100vw !important;
+    width: 90vw !important;
+    margin: 0 auto !important;
     padding: 0.6rem 0 !important;
     font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
@@ -906,7 +910,7 @@ footer {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-  /* Center all footer content */
+  /* Center all footer content and make links/icons larger and centered */
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -917,15 +921,20 @@ footer {
     margin: 0 auto !important;
     padding: 0 !important;
   }
-  footer .footer-icons {
+  .footer-icons {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100vw !important;
     margin: 1rem 0 0 0 !important;
-    gap: 1.2rem !important;
+    gap: 1.5rem !important;
   }
-  footer .footer-links {
+  .footer-icons img {
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 0.3rem !important;
+  }
+  .footer-links {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -934,11 +943,11 @@ footer {
     gap: 0.7rem !important;
     margin: 1rem 0 0 0 !important;
   }
-  footer .footer-links a {
+  .footer-links a {
     display: block !important;
     margin: 0.2rem auto !important;
-    font-size: 1.1rem !important;
-    padding: 0.5rem 0 !important;
+    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
@@ -949,14 +958,7 @@ footer {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
-  }
-  /* Highlight current nav link on mobile */
-  nav a.active {
-    background: #333 !important;
-    color: inherit !important;
-    font-weight: bold !important;
-    border-left: 4px solid #bbb !important;
-    border-radius: 0 !important;
+    font-size: 1.05rem !important;
   }
 }
 
