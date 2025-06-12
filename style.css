@@ -405,13 +405,14 @@ nav a.active {
     display: block;
     width: 100vw;
     text-align: left;
-    padding-left: 1.2em;
+    padding-left: 2em !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
     font-size: 2rem;
     margin: 0.2em 0 0.3em 0;
     letter-spacing: 0.03em;
+    text-align: left !important;
   }
   nav ul {
     flex-direction: column !important;
@@ -424,6 +425,7 @@ nav a.active {
     padding: 0.2rem 0 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
+    text-align: center !important;
   }
   nav li {
     width: 100vw !important;
@@ -446,8 +448,9 @@ nav a.active {
     border-bottom: none !important;
   }
   /* Contact form button fix */
-  .contact-form button, .contact-form input[type="submit"] {
-    font-size: 1.1rem !important;
+  button, input[type="submit"] {
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
     color: #fff !important;
     background: #222 !important;
     border: 2px solid #222 !important;
@@ -459,53 +462,54 @@ nav a.active {
     max-width: 350px !important;
     text-align: center !important;
     opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
-  .contact-form button[disabled], .contact-form input[type="submit"][disabled] {
+  button[disabled], input[type="submit"][disabled] {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-  /* Center footer content */
+  /* Center all footer content */
   footer .container.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     width: 100vw !important;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 1rem;
-    width: 100vw !important;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-links a {
-    display: block;
-    margin: 0.2rem auto;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    color: #fff;
-    background: #222;
-    border-radius: 6px;
-    width: 90vw;
-    text-align: center;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
   .footer-icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
+    margin-top: 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
     width: 100vw !important;
   }
   .footer-icons img {
-    width: 32px;
-    height: 32px;
-    margin: 0 0.2rem;
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 0.2rem !important;
+  }
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    margin-top: 1rem !important;
+    width: 100vw !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-links a {
+    display: block !important;
+    margin: 0.2rem auto !important;
+    font-size: 1.1rem !important;
+    padding: 0.5rem 0 !important;
+    color: #fff !important;
+    background: #222 !important;
+    border-radius: 6px !important;
+    width: 90vw !important;
+    text-align: center !important;
   }
 }
 
@@ -824,13 +828,14 @@ footer {
     display: block;
     width: 100vw;
     text-align: left;
-    padding-left: 1.2em;
+    padding-left: 2em !important;
     margin-bottom: 0.2em;
   }
   .logo-link h1 {
     font-size: 2rem;
     margin: 0.2em 0 0.3em 0;
     letter-spacing: 0.03em;
+    text-align: left !important;
   }
   nav ul {
     flex-direction: column !important;
@@ -843,6 +848,7 @@ footer {
     padding: 0.2rem 0 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
+    text-align: center !important;
   }
   nav li {
     width: 100vw !important;
@@ -865,8 +871,9 @@ footer {
     border-bottom: none !important;
   }
   /* Contact form button fix */
-  .contact-form button, .contact-form input[type="submit"] {
-    font-size: 1.1rem !important;
+  button, input[type="submit"] {
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
     color: #fff !important;
     background: #222 !important;
     border: 2px solid #222 !important;
@@ -878,53 +885,54 @@ footer {
     max-width: 350px !important;
     text-align: center !important;
     opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
-  .contact-form button[disabled], .contact-form input[type="submit"][disabled] {
+  button[disabled], input[type="submit"][disabled] {
     opacity: 0.6 !important;
     color: #fff !important;
   }
-  /* Center footer content */
+  /* Center all footer content */
   footer .container.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     width: 100vw !important;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 1rem;
-    width: 100vw !important;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-links a {
-    display: block;
-    margin: 0.2rem auto;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    color: #fff;
-    background: #222;
-    border-radius: 6px;
-    width: 90vw;
-    text-align: center;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
   .footer-icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
+    margin-top: 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
     width: 100vw !important;
   }
   .footer-icons img {
-    width: 32px;
-    height: 32px;
-    margin: 0 0.2rem;
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 0.2rem !important;
+  }
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    margin-top: 1rem !important;
+    width: 100vw !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-links a {
+    display: block !important;
+    margin: 0.2rem auto !important;
+    font-size: 1.1rem !important;
+    padding: 0.5rem 0 !important;
+    color: #fff !important;
+    background: #222 !important;
+    border-radius: 6px !important;
+    width: 90vw !important;
+    text-align: center !important;
   }
 }
 
