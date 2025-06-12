@@ -1115,6 +1115,7 @@ body,
   }
   .card {
     width: 100% !important;
+    flex: none !important;
     min-width: 0 !important;
     min-height: unset !important;
     border-radius: 0 !important;
@@ -1126,6 +1127,7 @@ body,
     padding: 1.2rem 0.7rem 1.7rem 0.7rem !important;
     box-sizing: border-box !important;
     position: static !important;
+    display: block !important;
   }
   .cards .card:not(:last-child)::after {
     display: none !important;
@@ -1133,9 +1135,11 @@ body,
   .card-text {
     padding: 0 !important;
     text-align: center !important;
+    display: block !important;
   }
   .card-tagline-row {
     margin-top: 1.2rem !important;
+    display: block !important;
   }
   .cards-cta {
     margin-top: 2rem !important;
