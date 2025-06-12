@@ -1104,3 +1104,42 @@ body,
     font-size: 1rem !important;
     border-bottom: 1px solid #222;
   }
+  /* Card Section: Stack cards vertically and remove horizontal gaps */
+  .cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+  .card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: unset !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid #e4e4e4 !important;
+    border-bottom: 1px solid #e4e4e4 !important;
+    margin: 0 !important;
+    padding: 1.2rem 0.7rem 1.7rem 0.7rem !important;
+    box-sizing: border-box !important;
+    position: static !important;
+  }
+  .cards .card:not(:last-child)::after {
+    display: none !important;
+  }
+  .card-text {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .card-tagline-row {
+    margin-top: 1.2rem !important;
+  }
+  .cards-cta {
+    margin-top: 2rem !important;
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+}
