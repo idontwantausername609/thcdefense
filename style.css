@@ -417,60 +417,55 @@ nav a.active {
     text-align: center !important;
     width: 100vw;
   }
+  nav {
+    width: 100vw !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   nav ul {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
     width: 100vw !important;
     background: #1a1a1a !important;
-    padding: 0.2rem 0 !important;
-    margin: 0 !important;
     gap: 0 !important;
-    text-align: center !important;
-  }
-  nav li {
-    width: 100vw !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
     margin: 0 !important;
     padding: 0 !important;
   }
-  nav a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  nav li {
     width: 100vw !important;
+    text-align: center !important;
     margin: 0 !important;
-    padding: 0.6rem 0 !important;
-    font-size: 1.1rem !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  nav a {
+    display: block !important;
+    width: 100vw !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0.7rem 0 !important;
+    font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
-    letter-spacing: 0.02em !important;
-    text-align: center !important;
     font-family: 'Cinzel', serif !important;
     font-weight: 400 !important;
     box-sizing: border-box !important;
+    letter-spacing: 0.02em !important;
   }
   nav a.active {
     background: #333 !important;
     color: #fff !important;
     font-weight: bold !important;
-    border-left: 4px solid #bbb !important;
+    border-left: none !important;
+    border-bottom: 2px solid #bbb !important;
     border-radius: 0 !important;
+    width: 100vw !important;
+    text-align: center !important;
+    display: block !important;
   }
   nav a:last-child {
     border-bottom: none !important;
-  }
-  .logo-link, .logo-link h1 {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100vw !important;
-    text-align: center !important;
-    margin: 0 auto 0.2em auto !important;
   }
 
   /* CONTACT FORM BUTTON */
@@ -501,6 +496,11 @@ nav a.active {
   }
 
   /* FOOTER */
+  footer {
+    padding: 1.1rem 0.4rem 1rem 0.4rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -517,43 +517,41 @@ nav a.active {
     align-items: center !important;
     text-align: center !important;
     width: 100vw !important;
-    gap: 0.7rem !important;
-    margin: 1rem 0 0 0 !important;
+    gap: 0.3rem !important;
+    margin: 0.5rem 0 0 0 !important;
   }
   .footer-links a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: block !important;
     width: 100vw !important;
+    text-align: center !important;
     margin: 0 !important;
-    font-size: 1.1rem !important;
-    padding: 0.6rem 0 !important;
+    font-size: 1.07rem !important;
+    padding: 0.45rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
-    text-align: center !important;
     font-family: 'Cinzel', serif !important;
     font-weight: 400 !important;
     box-sizing: border-box !important;
   }
+  .footer-links a:hover {
+    background: #444 !important;
+    color: #fff !important;
+  }
   .footer-icons {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100vw !important;
-    margin: 1rem 0 0 0 !important;
-    gap: 1.5rem !important;
+    margin-top: 0.7rem !important;
+    gap: 1rem !important;
   }
   .footer-icons img {
-    width: 36px !important;
-    height: 36px !important;
-    margin: 0 0.3rem !important;
+    width: 26px !important;
+    height: 26px !important;
+    margin: 0 0.15rem !important;
   }
   footer p, .footer-content p {
     text-align: center !important;
     width: 100vw !important;
-    margin: 0.7rem 0 0 0 !important;
-    font-size: 1.05rem !important;
+    margin: 0.5rem 0 0 0 !important;
+    font-size: 0.95rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
   }
@@ -886,60 +884,55 @@ footer {
     text-align: center !important;
     width: 100vw;
   }
+  nav {
+    width: 100vw !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   nav ul {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
     width: 100vw !important;
     background: #1a1a1a !important;
-    padding: 0.2rem 0 !important;
-    margin: 0 !important;
     gap: 0 !important;
-    text-align: center !important;
-  }
-  nav li {
-    width: 100vw !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
     margin: 0 !important;
     padding: 0 !important;
   }
-  nav a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  nav li {
     width: 100vw !important;
+    text-align: center !important;
     margin: 0 !important;
-    padding: 0.6rem 0 !important;
-    font-size: 1.1rem !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  nav a {
+    display: block !important;
+    width: 100vw !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0.7rem 0 !important;
+    font-size: 1.13rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
-    letter-spacing: 0.02em !important;
-    text-align: center !important;
     font-family: 'Cinzel', serif !important;
     font-weight: 400 !important;
     box-sizing: border-box !important;
+    letter-spacing: 0.02em !important;
   }
   nav a.active {
     background: #333 !important;
     color: #fff !important;
     font-weight: bold !important;
-    border-left: 4px solid #bbb !important;
+    border-left: none !important;
+    border-bottom: 2px solid #bbb !important;
     border-radius: 0 !important;
+    width: 100vw !important;
+    text-align: center !important;
+    display: block !important;
   }
   nav a:last-child {
     border-bottom: none !important;
-  }
-  .logo-link, .logo-link h1 {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100vw !important;
-    text-align: center !important;
-    margin: 0 auto 0.2em auto !important;
   }
 
   /* CONTACT FORM BUTTON */
@@ -970,6 +963,11 @@ footer {
   }
 
   /* FOOTER */
+  footer {
+    padding: 1.1rem 0.4rem 1rem 0.4rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
   footer .container.footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -986,43 +984,41 @@ footer {
     align-items: center !important;
     text-align: center !important;
     width: 100vw !important;
-    gap: 0.7rem !important;
-    margin: 1rem 0 0 0 !important;
+    gap: 0.3rem !important;
+    margin: 0.5rem 0 0 0 !important;
   }
   .footer-links a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: block !important;
     width: 100vw !important;
+    text-align: center !important;
     margin: 0 !important;
-    font-size: 1.1rem !important;
-    padding: 0.6rem 0 !important;
+    font-size: 1.07rem !important;
+    padding: 0.45rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
-    text-align: center !important;
     font-family: 'Cinzel', serif !important;
     font-weight: 400 !important;
     box-sizing: border-box !important;
   }
+  .footer-links a:hover {
+    background: #444 !important;
+    color: #fff !important;
+  }
   .footer-icons {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100vw !important;
-    margin: 1rem 0 0 0 !important;
-    gap: 1.5rem !important;
+    margin-top: 0.7rem !important;
+    gap: 1rem !important;
   }
   .footer-icons img {
-    width: 36px !important;
-    height: 36px !important;
-    margin: 0 0.3rem !important;
+    width: 26px !important;
+    height: 26px !important;
+    margin: 0 0.15rem !important;
   }
   footer p, .footer-content p {
     text-align: center !important;
     width: 100vw !important;
-    margin: 0.7rem 0 0 0 !important;
-    font-size: 1.05rem !important;
+    margin: 0.5rem 0 0 0 !important;
+    font-size: 0.95rem !important;
     display: block !important;
     font-family: 'Cinzel', serif !important;
   }
