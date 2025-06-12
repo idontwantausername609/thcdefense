@@ -518,9 +518,9 @@ nav a.active {
   /* Highlight current nav link on mobile */
   nav a.active {
     background: #333 !important;
-    color: #ffd700 !important;
+    color: inherit !important;
     font-weight: bold !important;
-    border-left: 4px solid #ffd700 !important;
+    border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
   }
 }
@@ -953,9 +953,9 @@ footer {
   /* Highlight current nav link on mobile */
   nav a.active {
     background: #333 !important;
-    color: #ffd700 !important;
+    color: inherit !important;
     font-weight: bold !important;
-    border-left: 4px solid #ffd700 !important;
+    border-left: 4px solid #bbb !important;
     border-radius: 0 !important;
   }
 }
