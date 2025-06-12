@@ -418,6 +418,7 @@ nav a.active {
     width: 100vw;
   }
   nav ul {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
@@ -427,29 +428,30 @@ nav a.active {
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
-    display: flex !important;
   }
   nav li {
     width: 100vw !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   nav a {
-    display: block !important;
-    width: 100vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0.6rem 0 !important;
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
     text-align: center !important;
-    min-width: unset !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400 !important;
     box-sizing: border-box !important;
   }
   nav a.active {
@@ -490,16 +492,19 @@ nav a.active {
     margin: 1rem 0 0 0 !important;
   }
   .footer-links a {
-    display: block !important;
-    width: 100vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
     margin: 0 !important;
-    font-size: 0.5rem !important;
+    font-size: 1.1rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
     text-align: center !important;
-    min-width: unset !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400 !important;
     box-sizing: border-box !important;
   }
   .footer-icons {
@@ -519,8 +524,9 @@ nav a.active {
     text-align: center !important;
     width: 100vw !important;
     margin: 0.7rem 0 0 0 !important;
-    font-size: 0.5rem !important;
+    font-size: 1.05rem !important;
     display: block !important;
+    font-family: 'Cinzel', serif !important;
   }
 }
 
@@ -852,6 +858,7 @@ footer {
     width: 100vw;
   }
   nav ul {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
@@ -861,29 +868,30 @@ footer {
     margin: 0 !important;
     gap: 0 !important;
     text-align: center !important;
-    display: flex !important;
   }
   nav li {
     width: 100vw !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   nav a {
-    display: block !important;
-    width: 100vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0.6rem 0 !important;
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
     letter-spacing: 0.02em !important;
     text-align: center !important;
-    min-width: unset !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400 !important;
     box-sizing: border-box !important;
   }
   nav a.active {
@@ -924,16 +932,19 @@ footer {
     margin: 1rem 0 0 0 !important;
   }
   .footer-links a {
-    display: block !important;
-    width: 100vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
     margin: 0 !important;
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     padding: 0.6rem 0 !important;
     color: #fff !important;
     background: #222 !important;
     border-radius: 6px !important;
     text-align: center !important;
-    min-width: unset !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400 !important;
     box-sizing: border-box !important;
   }
   .footer-icons {
@@ -955,6 +966,7 @@ footer {
     margin: 0.7rem 0 0 0 !important;
     font-size: 1.05rem !important;
     display: block !important;
+    font-family: 'Cinzel', serif !important;
   }
 }
 
