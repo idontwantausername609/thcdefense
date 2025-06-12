@@ -409,7 +409,7 @@ nav a.active {
     left: 0 !important;
     position: static !important;
     background: #1a1a1a !important;
-    padding: 0.5rem 0 !important;
+    padding: 0.2rem 0 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
   }
@@ -422,11 +422,12 @@ nav a.active {
   nav a {
     display: block !important;
     width: 100vw !important;
-    padding: 1rem 0 !important;
-    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
+    font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
+    letter-spacing: 0.02em !important;
   }
   nav a:last-child {
     border-bottom: none !important;
@@ -453,38 +454,31 @@ nav a.active {
     gap: 0.5em;
   }
   .footer-links a {
-    width: 100%;
+    width: auto;
+    display: inline-block;
+    background: none;
+    color: #f8f8f8;
+    font-size: 0.98rem;
+    padding: 0.3em 0.7em;
+    border-radius: 4px;
+    margin: 0.1em 0;
+    border: none;
     text-align: center;
-    font-size: 1.1rem;
-    padding: 0.7em 0;
   }
-  .footer-icons {
-    gap: 1.5em;
-    margin-bottom: 1em;
+  .footer-links a:hover {
+    background: #222;
+    color: #fff;
   }
-  .footer-icons img {
-    width: 36px;
-    height: 36px;
+  .footer-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5em;
   }
-  .contact-form, .contact-info {
-    width: 100vw !important;
-    min-width: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  footer {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    font-size: 0.98rem;
   }
-  .contact-form form {
-    width: 100vw !important;
-    padding: 0 !important;
-  }
-  .form-footer {
-    align-items: center;
-  }
-  .section-title, .welcome-block h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .welcome-block p, .card-tagline, .cards-cta {
-    font-size: 1rem;
+  section, .welcome-block, .cards-cta {
+    margin-bottom: 1.2em !important;
   }
 }
 
@@ -1028,7 +1022,7 @@ body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):no
     left: 0 !important;
     position: static !important;
     background: #1a1a1a !important;
-    padding: 0.5rem 0 !important;
+    padding: 0.2rem 0 0.2rem 0 !important;
     margin: 0 !important;
     gap: 0 !important;
   }
@@ -1041,11 +1035,12 @@ body.faqs-page .content-section .container.narrow > *:not(h2):not(h3):not(h4):no
   nav a {
     display: block !important;
     width: 100vw !important;
-    padding: 1rem 0 !important;
-    font-size: 1.15rem !important;
+    padding: 0.6rem 0 !important;
+    font-size: 1rem !important;
     border-bottom: 1px solid #222 !important;
     color: #f8f8f8 !important;
     background: #1a1a1a !important;
+    letter-spacing: 0.02em !important;
   }
   nav a:last-child {
     border-bottom: none !important;
