@@ -131,18 +131,6 @@
     menu.addEventListener('animationstart', function(e) {
       if (e.animationName === 'menuDown') menu.style.display = 'flex';
     });
-  }
-  // Highlight current nav link (desktop)
-  (function() {
-    var path = window.location.pathname.split('/').pop();
-    if (!path) path = 'index.html';
-    var links = document.querySelectorAll('.nav-link');
-    links.forEach(function(link) {
-      if (link.getAttribute('href') === path) {
-        link.classList.add('active');
-      }
-    });
-    
     // Close menu when link is clicked
    Array.from(document.querySelectorAll('.mobile-menu a')).forEach(link => {
       link.onclick = () => {
@@ -154,7 +142,17 @@
         }, 220);
       };
     });
-
+  }
+  // Highlight current nav link (desktop)
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
   })();
   // Highlight current nav link (mobile)
   (function() {
