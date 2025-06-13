@@ -1017,12 +1017,16 @@ body,
 }
 
 /* ===== Hamburger Mobile Menu Styles (moved from HTML files) ===== */
+/* Hamburger Mobile Menu Styles */
 .mobile-header {
   background: #1a1a1a;
   color: #fff;
   font-family: 'Cinzel', serif;
-  position: relative;
-  z-index: 100;
+  position: fixed;     /* Fixes header to top */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1200;
   box-shadow: 0 2px 8px rgba(30,30,30,0.11);
   display: none;
 }
@@ -1031,6 +1035,7 @@ body,
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.2rem;
+  width: 100vw;
 }
 .mobile-logo {
   font-size: 2rem;
@@ -1048,7 +1053,7 @@ body,
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 200;
+  z-index: 1300;
 }
 .hamburger span {
   display: block;
@@ -1062,9 +1067,9 @@ body,
   display: none;
   flex-direction: column;
   background: #1a1a1a;
-  width: 100%;
+  width: 100vw;
   padding: 0.2rem 0 0.5rem 0;
-  text-align: right;
+  text-align: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.10);
   position: absolute;
   top: 100%;
@@ -1072,14 +1077,14 @@ body,
 }
 .mobile-menu a {
   color: #fff;
-  padding: 1rem 1.7rem 1rem 1.7rem;
+  padding: 1rem 0;
   font-size: 1.13rem;
   font-family: 'Cinzel', serif;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #222;
   transition: background 0.19s;
-  text-align: right;
+  text-align: center;
   letter-spacing: 0.03em;
 }
 .mobile-menu a:last-child {
@@ -1109,9 +1114,13 @@ body,
 /* Responsive: Show hamburger on mobile, hide desktop nav */
 @media (max-width: 700px) {
   .mobile-header { display: block !important; }
-  header { display: none !important; }
+  header:not(.mobile-header) { display: none !important; }
+  body {
+    padding-top: 70px; /* Keeps content from hiding behind fixed mobile header */
+  }
 }
 @media (min-width: 701px) {
   .mobile-header { display: none !important; }
 }
+
 /* ===== End Hamburger Mobile Menu Styles ===== */
