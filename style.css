@@ -812,13 +812,6 @@ body,
     box-sizing: border-box !important;
     position: static !important;
   }
-
-  .container.contact-grid {
-    /* max-width: 98vw; */
-    /* padding-left: 2vw; */
-    /* padding-right: 2vw; */
-    /* gap: 5vw; */
-  }
 }
 
 @media (max-width: 700px) {
@@ -1015,5 +1008,10 @@ body,
   /* Hide footer link separators on mobile */
   .footer-separator {
     display: none !important;
+  }
+
+@media (max-width: 700px) {
+  h3, .content-section h3 {
+    letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
 }
