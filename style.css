@@ -1018,15 +1018,17 @@ body,
 
 /* ===== Hamburger Mobile Menu Styles (moved from HTML files) ===== */
 /* Hamburger Mobile Menu Styles */
+
+@media (max-width: 700px) {
 .mobile-header {
   background: #1a1a1a;
   color: #fff;
   font-family: 'Cinzel', serif;
-  position: fixed;     /* Fixes header to top */
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1200;
+  z-index: 100;
   box-shadow: 0 2px 8px rgba(30,30,30,0.11);
   display: none;
 }
@@ -1096,6 +1098,8 @@ body,
   background: #232323;
   color: #fff;
 }
+}
+
 @keyframes menuDown {
   from { opacity: 0; transform: translateY(-10px);}
   to   { opacity: 1; transform: translateY(0);}
