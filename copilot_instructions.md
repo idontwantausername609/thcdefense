@@ -173,17 +173,17 @@ do not duplicate css code
     menu.addEventListener('animationstart', function(e) {
       if (e.animationName === 'menuDown') menu.style.display = 'flex';
     });
-    // Optional: close menu when link is clicked
-    // Array.from(document.querySelectorAll('.mobile-menu a')).forEach(link => {
-    //   link.onclick = () => {
-    //     menu.classList.remove('show');
-    //     menu.classList.add('hiding');
-    //     setTimeout(() => {
-    //       menu.classList.remove('hiding');
-    //       menu.style.display = "none";
-    //     }, 220);
-    //   };
-    // });
+    // Close menu when link is clicked
+   Array.from(document.querySelectorAll('.mobile-menu a')).forEach(link => {
+      link.onclick = () => {
+        menu.classList.remove('show');
+        menu.classList.add('hiding');
+        setTimeout(() => {
+          menu.classList.remove('hiding');
+          menu.style.display = "none";
+        }, 220);
+      };
+    });
   </script>
 </body>
 </html>

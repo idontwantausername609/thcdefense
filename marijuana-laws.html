@@ -142,6 +142,19 @@
         link.classList.add('active');
       }
     });
+    
+    // Close menu when link is clicked
+   Array.from(document.querySelectorAll('.mobile-menu a')).forEach(link => {
+      link.onclick = () => {
+        menu.classList.remove('show');
+        menu.classList.add('hiding');
+        setTimeout(() => {
+          menu.classList.remove('hiding');
+          menu.style.display = "none";
+        }, 220);
+      };
+    });
+
   })();
   // Highlight current nav link (mobile)
   (function() {
