@@ -1108,7 +1108,6 @@ body,
   header:not(.mobile-header) { display: none !important; }
 }
 /* Hide mobile header on desktop */
-@media (min-width: 701px) {
+
   .mobile-header { display: none !important; }
   header:(.mobile-header) {display: none !important; }
-}
