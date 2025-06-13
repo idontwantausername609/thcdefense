@@ -265,6 +265,13 @@ nav a.active {
 /* ==============================
    5. Hero & Page Hero
 ============================== */
+.page-hero {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
 .page-hero.compact {
   background-color: #e5e5e5;
   color: #1a1a1a;
