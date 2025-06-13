@@ -9,38 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hamburger mobile header/menu -->
-  <header class="mobile-header">
-    <div class="mobile-nav-bar">
-      <div class="mobile-logo">THC Defense</div>
-      <button class="hamburger" id="hamburger-menu" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="mobile-menu" id="mobile-menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="arrest-records.html">Arrest Records</a>
-      <a href="marijuana-laws.html">Marijuana Laws</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <h1>THC Defense</h1>
+    </a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html" class="nav-link home-link">Home</a></li>
+        <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
+        <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
+        <li><a href="faqs.html" class="nav-link faqs-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
+      </ul>
     </nav>
-  </header>
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <h1>THC Defense</h1>
-      </a>
-      <nav>
-        <ul id="main-nav">
-          <li><a href="index.html" class="nav-link home-link">Home</a></li>
-          <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
-          <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
-          <li><a href="faqs.html" class="nav-link faqs-link">FAQs</a></li>
-          <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  </div>
+</header>
 
 <section class="hero home-hero">
   <div class="hero-text">
@@ -111,103 +95,26 @@
   <br class="mobile-hide-br"><br class="mobile-hide-br">
 </section>
 
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/112168584305878" target="_blank" aria-label="Facebook">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://www.yelp.com/biz/j-horn-and-associates-houston" target="_blank" aria-label="Yelp">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
-        </a>
-      </div>
-      <p>&copy; 2025 THCDefense.com – Your trusted Texas marijuana defense team.</p>
-      <div class="footer-links">
-        <a href="index.html">Home</a><span class="footer-separator"> | </span>
-        <a href="arrest-records.html">Arrest Records</a><span class="footer-separator"> | </span>
-        <a href="marijuana-laws.html">Marijuana Laws</a><span class="footer-separator"> | </span>
-        <a href="faqs.html">FAQs</a><span class="footer-separator"> | </span>
-        <a href="contact.html">Contact</a>
-      </div>
+<footer>
+  <div class="container footer-content">
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/112168584305878" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.yelp.com/biz/j-horn-and-associates-houston" target="_blank" aria-label="Yelp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
+      </a>
     </div>
-  </footer>
-  <script>
-    // Hamburger menu JS (from copilot_instructions.md)
-    const hamburger = document.getElementById('hamburger-menu');
-    const menu = document.getElementById('mobile-menu');
-    if (hamburger && menu) {
-      hamburger.onclick = function() {
-        if (!menu.classList.contains('show')) {
-          menu.style.display = 'flex';
-          menu.classList.add('show');
-          menu.classList.remove('hiding');
-        } else {
-          menu.classList.remove('show');
-          menu.classList.add('hiding');
-          setTimeout(() => {
-            menu.classList.remove('hiding');
-            menu.style.display = "none";
-          }, 220);
-        }
-      };
-      menu.addEventListener('animationstart', function(e) {
-        if (e.animationName === 'menuDown') menu.style.display = 'flex';
-      });
-    }
-    // Highlight current nav link (desktop)
-    (function() {
-      var path = window.location.pathname.split('/').pop();
-      if (!path) path = 'index.html';
-      var links = document.querySelectorAll('.nav-link');
-      links.forEach(function(link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
-      });
-    })();
-    // Highlight current nav link (mobile)
-    (function() {
-      var path = window.location.pathname.split('/').pop();
-      if (!path) path = 'index.html';
-      var mobileLinks = document.querySelectorAll('.mobile-menu a');
-      mobileLinks.forEach(function(link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
-      });
-    })();
-  </script>
-</body>
-</html>
-            <div class="card-tagline-row"><p class="card-tagline">Your record. Our reputation. Protected.</p></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-text">
-            <h3>The Client Comes First</h3>
-            <p>
-              Every client receives our full attention and commitment. We craft aggressive, personalized defense strategies based on your unique situation and goals. Protecting your rights, your record, and your peace of mind is our top priority—because you deserve nothing less.
-            </p>
-            <div class="card-tagline-row"><p class="card-tagline">Personalized defense. Unmatched dedication.</p></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-text">
-            <h3>Here to Stay</h3>
-            <p>
-              For more than two decades, Jerry Horn has been a trusted advocate for clients across Houston and beyond. As a local firm, we’re invested in our community—and always here when you need guidance, support, or answers about your legal options.
-            </p>
-            <div class="card-tagline-row"><p class="card-tagline">Rooted in Houston. Here for you—always.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br class="mobile-hide-br">
-    <div class="welcome-block"></div>
-      <p class="welcome-block-cta" style="margin-top:2.5rem; text-align:center;">Not sure where to start? <a href="contact.html"><b>Contact our team today for a free, confidential consultation.</a></b></p>
-    </div>
+    <p>&copy; 2025 THCDefense.com – Your trusted Texas marijuana defense team.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a><span class="footer-separator"> | </span>
+      <a href="arrest-records.html">Arrest Records</a><span class="footer-separator"> | </span>
+      <a href="marijuana-laws.html">Marijuana Laws</a><span class="footer-separator"> | </span>
+      <a href="faqs.html">FAQs</a><span class="footer-separator"> | </span>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
+<<<<<<< HEAD
   <br class="mobile-hide-br"><br class="mobile-hide-br">
 </section>
 
@@ -290,5 +197,21 @@
       });
     })();
   </script>
+=======
+</footer>
+<script>
+  // Highlight current nav link
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+>>>>>>> parent of e1befc7 (hamburger)
 </body>
 </html>

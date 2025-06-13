@@ -1014,6 +1014,7 @@ body,
   .content-section h3 {
     letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
+<<<<<<< HEAD
 }
 
 /* ===== Hamburger Mobile Menu Styles (moved from HTML files) ===== */
@@ -1130,3 +1131,6 @@ body,
 
 
 /* ===== End Hamburger Mobile Menu Styles ===== */
+=======
+}
+>>>>>>> parent of e1befc7 (hamburger)
