@@ -1014,11 +1014,98 @@ body,
   .content-section h3 {
     letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of e1befc7 (hamburger)
-=======
->>>>>>> parent of e1befc7 (hamburger)
+}
+
+
+/* ====== Hamburger Mobile Nav (Only on mobile) ====== */
+.mobile-header {
+  display: none;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(30,30,30,0.11);
+}
+.mobile-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.1rem 1.2rem 1.1rem;
+}
+.mobile-logo {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  color: #fff;
+  text-decoration: none;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.33em;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #1a1a1a;
+  width: 100%;
+  padding: 0.1rem 0 0.6rem 0;
+  text-align: right;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+.mobile-menu a {
+  color: #fff;
+  padding: 1.1rem 1.7rem 1.1rem 1.7rem;
+  font-size: 1.12rem;
+  font-family: 'Cinzel', serif;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #222;
+  transition: background 0.19s;
+  text-align: right;
+  letter-spacing: 0.03em;
+}
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  background: #232323;
+  color: #fff;
+}
+.mobile-menu.show {
+  display: flex;
+  animation: menuDown 0.26s cubic-bezier(.67,.17,.32,.99) forwards;
+}
+@keyframes menuDown {
+  from { opacity: 0; transform: translateY(-18px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+/* Show hamburger menu and hide desktop nav on mobile */
+@media (max-width: 700px) {
+  .mobile-header { display: block !important; }
+  header:not(.mobile-header) { display: none !important; }
+}
+/* Hide mobile header on desktop */
+@media (min-width: 701px) {
+  .mobile-header { display: none !important; }
 }

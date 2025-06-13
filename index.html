@@ -9,6 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Mobile Hamburger Nav (show only on mobile) -->
+<header class="mobile-header">
+  <div class="mobile-nav-bar">
+    <a href="index.html" class="mobile-logo">THC Defense</a>
+    <button class="hamburger" id="hamburger-menu" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="arrest-records.html">Arrest Records</a>
+    <a href="marijuana-laws.html">Marijuana Laws</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
 <header>
   <div class="container">
     <a href="index.html" class="logo-link">
@@ -128,5 +146,32 @@
     });
   })();
 </script>
+
+<script>
+  // Hamburger open/close logic
+  const hamburger = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('mobile-menu');
+  if (hamburger && menu) {
+    hamburger.onclick = function() {
+      menu.classList.toggle('show');
+    };
+    // Close when any link is clicked
+    Array.from(menu.querySelectorAll('a')).forEach(link => {
+      link.onclick = () => menu.classList.remove('show');
+    });
+  }
+  // Highlight active nav on mobile
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.mobile-menu a');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
