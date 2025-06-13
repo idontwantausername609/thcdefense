@@ -99,7 +99,7 @@
     // Highlight current nav link
     (function() {
       var path = window.location.pathname.split('/').pop();
-      if (!path) path = 'index.html';
+      if (!path) path = 'arrest-records.html';
       var links = document.querySelectorAll('.nav-link');
       links.forEach(function(link) {
         if (link.getAttribute('href') === path) {
@@ -108,5 +108,32 @@
       });
     })();
   </script>
+
+  <script>
+  // Hamburger open/close logic
+  const hamburger = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('mobile-menu');
+  if (hamburger && menu) {
+    hamburger.onclick = function() {
+      menu.classList.toggle('show');
+    };
+    // Close when any link is clicked
+    Array.from(menu.querySelectorAll('a')).forEach(link => {
+      link.onclick = () => menu.classList.remove('show');
+    });
+  }
+  // Highlight active nav on mobile
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'arrest-records.html';
+    var links = document.querySelectorAll('.mobile-menu a');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
