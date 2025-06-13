@@ -1086,6 +1086,7 @@ body,
   transition: background 0.19s;
   text-align: center;
   letter-spacing: 0.03em;
+  width: 100vw;
 }
 .mobile-menu a:last-child {
   border-bottom: none;
@@ -1111,16 +1112,17 @@ body,
   display: flex;
   animation: menuUp 0.22s cubic-bezier(.67,.17,.32,.99) forwards;
 }
-/* Responsive: Show hamburger on mobile, hide desktop nav */
+/* Mobile: ONLY mobile header shows */
 @media (max-width: 700px) {
   .mobile-header { display: block !important; }
   header:not(.mobile-header) { display: none !important; }
-  body {
-    padding-top: 70px; /* Keeps content from hiding behind fixed mobile header */
-  }
 }
+
+/* Desktop: ONLY desktop header shows */
 @media (min-width: 701px) {
   .mobile-header { display: none !important; }
+  header:not(.mobile-header) { display: block !important; }
 }
+
 
 /* ===== End Hamburger Mobile Menu Styles ===== */
