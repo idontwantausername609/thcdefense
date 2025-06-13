@@ -4,16 +4,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us | THC Defense</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts: Cinzel for headings, Merriweather for body/cards, Inter as UI fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Hamburger mobile header/menu -->
+  <header class="mobile-header">
+    <div class="mobile-nav-bar">
+      <div class="mobile-logo">THC Defense</div>
+      <button class="hamburger" id="hamburger-menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="arrest-records.html">Arrest Records</a>
+      <a href="marijuana-laws.html">Marijuana Laws</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
 <header>
   <div class="container">
     <a href="index.html" class="logo-link">
       <h1>THC Defense</h1>
     </a>
     <nav>
-      <ul>
+      <ul id="main-nav">
         <li><a href="index.html" class="nav-link home-link">Home</a></li>
         <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
         <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
@@ -121,12 +139,143 @@
 </footer>
 
 <script>
-  // Highlight current nav link
+  // Hamburger menu JS
+  const hamburger = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('mobile-menu');
+  if (hamburger && menu) {
+    hamburger.onclick = function() {
+      if (!menu.classList.contains('show')) {
+        menu.style.display = 'flex';
+        menu.classList.add('show');
+        menu.classList.remove('hiding');
+      } else {
+        menu.classList.remove('show');
+        menu.classList.add('hiding');
+        setTimeout(() => {
+          menu.classList.remove('hiding');
+          menu.style.display = "none";
+        }, 220);
+      }
+    };
+    menu.addEventListener('animationstart', function(e) {
+      if (e.animationName === 'menuDown') menu.style.display = 'flex';
+    });
+  }
+  // Highlight current nav link (desktop)
   (function() {
     var path = window.location.pathname.split('/').pop();
     if (!path) path = 'index.html';
     var links = document.querySelectorAll('.nav-link');
     links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+  // Highlight current nav link (mobile)
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+
+  const preview = document.getElementById("hours-preview");
+  const wrapper = document.getElementById("hours-table");
+  const caret = document.querySelector(".hours-caret");
+  const todayText = document.getElementById("today-time");
+  const previewRowDiv = document.getElementById("hours-preview-row");
+  const rows = wrapper.querySelectorAll("tr");
+
+  // Correct day row index: rows[0]=Mon, rows[1]=Tue, ..., rows[6]=Sun
+  const jsDay = new Date().getDay(); // 0=Sunday, 1=Monday, ..., 6=Saturday
+  // Map JS day to table row index (Monday=0, ..., Sunday=6)
+  const dayRowIndex = jsDay === 0 ? 6 : jsDay - 1;
+
+  rows.forEach(row => row.classList.remove("today"));
+  if (rows[dayRowIndex]) {
+    rows[dayRowIndex].classList.add("today");
+    todayText.textContent = rows[dayRowIndex].children[1].textContent;
+  }
+
+  // On page load, show preview row, hide table
+  previewRowDiv.style.display = "flex";
+  wrapper.classList.remove("show");
+
+  function toggleHours() {
+    const caretTable = document.createElement('span');
+    caretTable.className = 'hours-caret-table';
+    caretTable.textContent = '▾';
+
+    const firstRow = wrapper.querySelectorAll("tr")[0];
+
+    if (wrapper.classList.contains("show")) {
+      wrapper.style.animation = "dropdown-close 0.3s ease";
+      setTimeout(() => {
+        wrapper.classList.remove("show");
+        document.querySelectorAll('.hours-caret-table').forEach(el => el.remove());
+        document.querySelector('.hours-toggle-bar').classList.remove('open');
+        caret.style.display = "";
+        previewRowDiv.style.display = "flex";
+        caret.classList.remove("rotated");
+      }, 300);
+    } else {
+      wrapper.style.animation = "dropdown 0.3s ease";
+      wrapper.classList.add("show");
+      document.querySelector('.hours-toggle-bar').classList.add('open');
+      caret.style.display = "none";
+      document.querySelectorAll('.hours-caret-table').forEach(el => el.remove());
+      let caretCell = firstRow.querySelector('.caret-cell');
+      if (!caretCell) {
+        caretCell = firstRow.insertCell(-1);
+        caretCell.className = 'caret-cell';
+      }
+      caretCell.appendChild(caretTable);
+      previewRowDiv.style.display = "none";
+      caret.classList.add("rotated");
+    }
+  }
+</script>
+
+</body>
+</html>
+        menu.style.display = 'flex';
+        menu.classList.add('show');
+        menu.classList.remove('hiding');
+      } else {
+        menu.classList.remove('show');
+        menu.classList.add('hiding');
+        setTimeout(() => {
+          menu.classList.remove('hiding');
+          menu.style.display = "none";
+        }, 220);
+      }
+    };
+    menu.addEventListener('animationstart', function(e) {
+      if (e.animationName === 'menuDown') menu.style.display = 'flex';
+    });
+  }
+  // Highlight current nav link (desktop)
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+  // Highlight current nav link (mobile)
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(function(link) {
       if (link.getAttribute('href') === path) {
         link.classList.add('active');
       }

@@ -5,16 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Marijuana Laws | THC Defense</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts: Cinzel for headings, Merriweather for body/cards, Inter as UI fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="arrest-page">
+  <!-- Hamburger mobile header/menu -->
+  <header class="mobile-header">
+    <div class="mobile-nav-bar">
+      <div class="mobile-logo">THC Defense</div>
+      <button class="hamburger" id="hamburger-menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="arrest-records.html">Arrest Records</a>
+      <a href="marijuana-laws.html" class="active">Marijuana Laws</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 <header>
   <div class="container">
     <a href="index.html" class="logo-link">
   <h1>THC Defense</h1>
 </a>
     <nav>
-      <ul>
+      <ul id="main-nav">
         <li><a href="index.html" class="nav-link home-link">Home</a></li>
         <li><a href="arrest-records.html" class="nav-link arrest-link">Arrest Records Explained</a></li>
         <li><a href="marijuana-laws.html" class="nav-link marijuana-link">Marijuana Laws</a></li>
@@ -93,12 +110,45 @@
   </div>
 </footer>
 <script>
-  // Highlight current nav link
+  // Hamburger menu JS
+  const hamburger = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('mobile-menu');
+  if (hamburger && menu) {
+    hamburger.onclick = function() {
+      if (!menu.classList.contains('show')) {
+        menu.style.display = 'flex';
+        menu.classList.add('show');
+        menu.classList.remove('hiding');
+      } else {
+        menu.classList.remove('show');
+        menu.classList.add('hiding');
+        setTimeout(() => {
+          menu.classList.remove('hiding');
+          menu.style.display = "none";
+        }, 220);
+      }
+    };
+    menu.addEventListener('animationstart', function(e) {
+      if (e.animationName === 'menuDown') menu.style.display = 'flex';
+    });
+  }
+  // Highlight current nav link (desktop)
   (function() {
     var path = window.location.pathname.split('/').pop();
     if (!path) path = 'index.html';
     var links = document.querySelectorAll('.nav-link');
     links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+  // Highlight current nav link (mobile)
+  (function() {
+    var path = window.location.pathname.split('/').pop();
+    if (!path) path = 'index.html';
+    var mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(function(link) {
       if (link.getAttribute('href') === path) {
         link.classList.add('active');
       }
