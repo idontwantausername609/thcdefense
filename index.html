@@ -114,90 +114,6 @@
       <a href="contact.html">Contact</a>
     </div>
   </div>
-<<<<<<< HEAD
-  <br class="mobile-hide-br"><br class="mobile-hide-br">
-</section>
-
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/112168584305878" target="_blank" aria-label="Facebook">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://www.yelp.com/biz/j-horn-and-associates-houston" target="_blank" aria-label="Yelp">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/yelp.svg" alt="Yelp" />
-        </a>
-      </div>
-      <p>&copy; 2025 THCDefense.com – Your trusted Texas marijuana defense team.</p>
-      <div class="footer-links">
-        <a href="index.html">Home</a><span class="footer-separator"> | </span>
-        <a href="arrest-records.html">Arrest Records</a><span class="footer-separator"> | </span>
-        <a href="marijuana-laws.html">Marijuana Laws</a><span class="footer-separator"> | </span>
-        <a href="faqs.html">FAQs</a><span class="footer-separator"> | </span>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-  <script>
-    // Hamburger menu JS (from copilot_instructions.md)
-    const hamburger = document.getElementById('hamburger-menu');
-    const menu = document.getElementById('mobile-menu');
-    if (hamburger && menu) {
-      hamburger.onclick = function() {
-        if (!menu.classList.contains('show')) {
-          menu.style.display = 'flex';
-          menu.classList.add('show');
-          menu.classList.remove('hiding');
-        } else {
-          menu.classList.remove('show');
-          menu.classList.add('hiding');
-          setTimeout(() => {
-            menu.classList.remove('hiding');
-            menu.style.display = "none";
-          }, 220);
-        }
-      };
-      menu.addEventListener('animationstart', function(e) {
-        if (e.animationName === 'menuDown') menu.style.display = 'flex';
-      });
-
-      // Close menu when link is clicked
-   Array.from(document.querySelectorAll('.mobile-menu a')).forEach(link => {
-      link.onclick = () => {
-        menu.classList.remove('show');
-        menu.classList.add('hiding');
-        setTimeout(() => {
-          menu.classList.remove('hiding');
-          menu.style.display = "none";
-        }, 220);
-      };
-    });
-    }
-    
-    // Highlight current nav link (desktop)
-    (function() {
-      var path = window.location.pathname.split('/').pop();
-      if (!path) path = 'index.html';
-      var links = document.querySelectorAll('.nav-link');
-      links.forEach(function(link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
-      });
-    })();
-    // Highlight current nav link (mobile)
-    (function() {
-      var path = window.location.pathname.split('/').pop();
-      if (!path) path = 'index.html';
-      var mobileLinks = document.querySelectorAll('.mobile-menu a');
-      mobileLinks.forEach(function(link) {
-        if (link.getAttribute('href') === path) {
-          link.classList.add('active');
-        }
-      });
-    })();
-  </script>
-=======
 </footer>
 <script>
   // Highlight current nav link
@@ -212,6 +128,5 @@
     });
   })();
 </script>
->>>>>>> parent of e1befc7 (hamburger)
 </body>
 </html>
