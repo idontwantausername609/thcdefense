@@ -1014,7 +1014,7 @@ body,
   .content-section h3 {
     letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
-}
+
 
 
 /* ====== Hamburger Mobile Nav (Only on mobile) ====== */
@@ -1095,6 +1095,8 @@ body,
   display: flex;
   animation: menuDown 0.26s cubic-bezier(.67,.17,.32,.99) forwards;
 }
+}
+
 @keyframes menuDown {
   from { opacity: 0; transform: translateY(-18px);}
   to   { opacity: 1; transform: translateY(0);}
