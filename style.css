@@ -1011,7 +1011,7 @@ body,
   }
 
 @media (max-width: 700px) {
-  h3, .content-section h3 {
+  .content-section h3 {
     letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
 }
