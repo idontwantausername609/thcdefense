@@ -948,7 +948,8 @@ body,
   }
 
   /* Contact Form Button */
-  .contact-form button, button, input[type="submit"] {
+  .contact-form button, 
+  .contact-form input[type="submit"] {
     display: block !important;
     width: 90vw !important;
     max-width: 350px !important;
@@ -965,11 +966,13 @@ body,
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     cursor: pointer;
   }
-  .contact-form button:hover, button:hover, input[type="submit"]:hover {
+  .contact-form button:hover, 
+  .contact-form input[type="submit"]:hover {
     background: #444 !important;
     color: #fff !important;
   }
-  .contact-form button[disabled], button[disabled], input[type="submit"][disabled] {
+  .contact-form button[disabled], 
+  .contact-form input[type="submit"][disabled] {
     opacity: 0.6 !important;
     color: #fff !important;
   }
@@ -1100,3 +1103,34 @@ body,
   .mobile-header { display: block !important; }
   header.desktop-header { display: none !important; }
 }
+
+/* --- Hamburger Button: Fully Isolated Styles --- */
+.hamburger-btn {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.33em !important;
+  cursor: pointer !important;
+  z-index: 200 !important;
+  position: relative;
+}
+.hamburger-btn span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+/* --- End Hamburger Button Isolation --- */
