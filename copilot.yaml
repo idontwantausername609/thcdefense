@@ -10,3 +10,5 @@ instructions:
   - Do not duplicate existing CSS rules; extend or reuse classes when possible.
   - Ensure all navigation and interactive elements are keyboard accessible.
   - Keep CSS sheet organised; keep a Table of Contents at the top of the sheet and organise the codes by their section.
+  - Always commit and push all changes after making them. 
+  - Always double check to make sure HTML files are compatible and up to date with CSS file. 
