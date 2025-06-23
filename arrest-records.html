@@ -141,5 +141,50 @@
   }
 </script>
 
+<script>
+// Hamburger menu open/close logic
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+let menuAnimating = false;
+
+function openMenu() {
+  if (menuAnimating) return;
+  mobileMenu.classList.add('show');
+  mobileMenu.classList.remove('hiding');
+}
+function closeMenu() {
+  if (menuAnimating || !mobileMenu.classList.contains('show')) return;
+  menuAnimating = true;
+  mobileMenu.classList.add('hiding');
+  mobileMenu.classList.remove('show');
+  setTimeout(() => {
+    mobileMenu.classList.remove('hiding');
+    menuAnimating = false;
+  }, 220);
+}
+hamburgerBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  if (mobileMenu.classList.contains('show')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+// Collapse menu when clicking outside
+window.addEventListener('click', function(e) {
+  if (
+    mobileMenu.classList.contains('show') &&
+    !mobileMenu.contains(e.target) &&
+    !hamburgerBtn.contains(e.target)
+  ) {
+    closeMenu();
+  }
+});
+// Prevent menu from closing when clicking inside
+mobileMenu.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+</script>
+
 </body>
 </html>
