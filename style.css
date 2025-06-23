@@ -210,6 +210,28 @@ nav a.active {
   padding: 0;
 }
 
+/* --- Fix: Hamburger button should not have extra background, border, or width. --- */
+.hamburger {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.33em;
+  cursor: pointer;
+  z-index: 200;
+}
+/* --- End fix --- */
+
 .hamburger span {
   display: block;
   height: 3px;
