@@ -1,0 +1,11 @@
+instructions:
+  - Use modern, semantic HTML and accessible ARIA attributes where appropriate.
+  - Prefer CSS Flexbox and Grid for layout, avoid using tables for non-tabular data.
+  - All CSS spacing should use rem or em units, not px, except for borders and very small elements.
+  - Use BEM or clear, descriptive class names for new CSS.
+  - Do not use jQuery or other legacy JavaScript libraries.
+  - Always comment complex or non-obvious code, especially in CSS and JavaScript.
+  - Keep mobile responsiveness in mind for all new features.
+  - Use 'Nunito Sans' for body text and 'Cinzel' for headings, matching the current style.
+  - Do not duplicate existing CSS rules; extend or reuse classes when possible.
+  - Ensure all navigation and interactive elements are keyboard accessible.
