@@ -184,8 +184,7 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 1.1rem; /* Restore original padding for tall nav bar */
-  /* Remove min-height so height is set by padding */
+  padding: 1rem 1.2rem;
 }
 
 .mobile-logo {
@@ -200,23 +199,34 @@ nav a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 0.25em;
-  width: 24px;
-  height: 24px;
+  gap: 0.33em;
+  width: 36px;
+  height: 36px;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 200;
+  align-items: center;
   padding: 0;
 }
 
 .hamburger span {
   display: block;
-  height: 2px; /* Thinner lines */
-  width: 18px; /* Shorter lines */
+  height: 3px;
+  width: 28px;
   background: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: 0.3s;
+}
+
+/* Menu Animations for open/close */
+@keyframes menuDown {
+  from { opacity: 0; transform: translateY(-10px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes menuUp {
+  from { opacity: 1; transform: translateY(0);}
+  to   { opacity: 0; transform: translateY(-10px);}
 }
 
 .mobile-menu {
@@ -257,12 +267,12 @@ nav a.active {
 
 .mobile-menu.show {
   display: flex;
-  animation: menuDown 0.26s cubic-bezier(.67,.17,.32,.99) forwards;
+  animation: menuDown 0.28s cubic-bezier(.67,.17,.32,.99) forwards;
 }
 
-@keyframes menuDown {
-  from { opacity: 0; transform: translateY(-18px);}
-  to   { opacity: 1; transform: translateY(0);}
+.mobile-menu.hiding {
+  display: flex;
+  animation: menuUp 0.22s cubic-bezier(.67,.17,.32,.99) forwards;
 }
 
 /* ==============================
