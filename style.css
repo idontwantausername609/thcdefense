@@ -184,8 +184,8 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 0.7rem; /* Reduced padding for less height */
-  min-height: 48px; /* Set a minimum height for compactness */
+  padding: 1.2rem 1.1rem; /* Restore original padding */
+  /* Remove min-height for default height */
 }
 
 .mobile-logo {
@@ -200,13 +200,14 @@ nav a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.7em; /* Increased gap for more space between lines */
+  gap: 0.7em; /* Keep increased gap for more space between lines */
   width: 32px;
-  height: 32px;
+  height: 24px; /* Make hamburger itself more compact */
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+  align-items: center; /* Center lines horizontally */
 }
 
 .hamburger span {
