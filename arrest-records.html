@@ -110,13 +110,13 @@
   </script>
 
   <script>
-  // Hamburger open/close logic with animation
+  // Hamburger open/close logic with animation (MOBILE ONLY)
   const hamburger = document.getElementById('hamburger-menu');
   const menu = document.getElementById('mobile-menu');
   if (hamburger && menu) {
     hamburger.onclick = function() {
       if (!menu.classList.contains('show')) {
-        menu.style.display = 'flex'; // ensure menu is visible before animating
+        menu.style.display = 'flex';
         menu.classList.add('show');
         menu.classList.remove('hiding');
       } else {
@@ -125,10 +125,9 @@
         setTimeout(() => {
           menu.classList.remove('hiding');
           menu.style.display = 'none';
-        }, 220); // Match menuUp duration
+        }, 220);
       }
     };
-    // Optional: close menu when link is clicked
     Array.from(menu.querySelectorAll('a')).forEach(link => {
       link.onclick = () => {
         menu.classList.remove('show');
@@ -140,17 +139,6 @@
       };
     });
   }
-  // Highlight active nav on mobile
-  (function() {
-    var path = window.location.pathname.split('/').pop();
-    if (!path) path = 'index.html';
-    var links = document.querySelectorAll('.mobile-menu a');
-    links.forEach(function(link) {
-      if (link.getAttribute('href') === path) {
-        link.classList.add('active');
-      }
-    });
-  })();
 </script>
 
 </body>
