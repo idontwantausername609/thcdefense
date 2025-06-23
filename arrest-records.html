@@ -110,39 +110,7 @@
   </script>
 
   <script>
-  // Hamburger open/close logic with animation (MOBILE ONLY)
-  const hamburger = document.getElementById('hamburger-menu');
-  const menu = document.getElementById('mobile-menu');
-  if (hamburger && menu) {
-    hamburger.onclick = function() {
-      if (!menu.classList.contains('show')) {
-        menu.style.display = 'flex';
-        menu.classList.add('show');
-        menu.classList.remove('hiding');
-      } else {
-        menu.classList.remove('show');
-        menu.classList.add('hiding');
-        setTimeout(() => {
-          menu.classList.remove('hiding');
-          menu.style.display = 'none';
-        }, 220);
-      }
-    };
-    Array.from(menu.querySelectorAll('a')).forEach(link => {
-      link.onclick = () => {
-        menu.classList.remove('show');
-        menu.classList.add('hiding');
-        setTimeout(() => {
-          menu.classList.remove('hiding');
-          menu.style.display = 'none';
-        }, 220);
-      };
-    });
-  }
-</script>
-
-<script>
-// Hamburger menu open/close logic
+// Hamburger menu open/close logic (single source of truth)
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 let menuAnimating = false;
@@ -183,6 +151,12 @@ window.addEventListener('click', function(e) {
 // Prevent menu from closing when clicking inside
 mobileMenu.addEventListener('click', function(e) {
   e.stopPropagation();
+});
+// Close menu when a nav link is clicked
+Array.from(mobileMenu.querySelectorAll('a')).forEach(link => {
+  link.onclick = () => {
+    closeMenu();
+  };
 });
 </script>
 
