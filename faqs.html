@@ -120,7 +120,7 @@
   // Highlight current nav link
   (function() {
     var path = window.location.pathname.split('/').pop();
-    if (!path) path = 'index.html';
+    if (!path) path = 'faqs.html';
     var links = document.querySelectorAll('.nav-link');
     links.forEach(function(link) {
       if (link.getAttribute('href') === path) {
@@ -131,46 +131,65 @@
 </script>
 
 <script>
-  // Hamburger open/close logic with animation (MOBILE ONLY)
-  const hamburger = document.getElementById('hamburger-menu');
-  const menu = document.getElementById('mobile-menu');
-  if (hamburger && menu) {
-    hamburger.onclick = function() {
-      if (!menu.classList.contains('show')) {
-        menu.style.display = 'flex';
-        menu.classList.add('show');
-        menu.classList.remove('hiding');
-      } else {
-        menu.classList.remove('show');
-        menu.classList.add('hiding');
-        setTimeout(() => {
-          menu.classList.remove('hiding');
-          menu.style.display = 'none';
-        }, 220);
-      }
-    };
-    Array.from(menu.querySelectorAll('a')).forEach(link => {
-      link.onclick = () => {
-        menu.classList.remove('show');
-        menu.classList.add('hiding');
-        setTimeout(() => {
-          menu.classList.remove('hiding');
-          menu.style.display = 'none';
-        }, 220);
-      };
-    });
+// Hamburger menu open/close logic (single source of truth)
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+let menuAnimating = false;
+
+function openMenu() {
+  if (menuAnimating) return;
+  mobileMenu.classList.add('show');
+  mobileMenu.classList.remove('hiding');
+}
+function closeMenu() {
+  if (menuAnimating || !mobileMenu.classList.contains('show')) return;
+  menuAnimating = true;
+  mobileMenu.classList.add('hiding');
+  mobileMenu.classList.remove('show');
+  setTimeout(() => {
+    mobileMenu.classList.remove('hiding');
+    menuAnimating = false;
+  }, 220);
+}
+hamburgerBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  if (mobileMenu.classList.contains('show')) {
+    closeMenu();
+  } else {
+    openMenu();
   }
-  // Highlight active nav on mobile
-  (function() {
-    var path = window.location.pathname.split('/').pop();
-    if (!path) path = 'index.html';
-    var links = document.querySelectorAll('.mobile-menu a');
-    links.forEach(function(link) {
-      if (link.getAttribute('href') === path) {
-        link.classList.add('active');
-      }
-    });
-  })();
+});
+// Collapse menu when clicking outside
+window.addEventListener('click', function(e) {
+  if (
+    mobileMenu.classList.contains('show') &&
+    !mobileMenu.contains(e.target) &&
+    !hamburgerBtn.contains(e.target)
+  ) {
+    closeMenu();
+  }
+});
+// Prevent menu from closing when clicking inside
+mobileMenu.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+// Close menu when a nav link is clicked
+Array.from(mobileMenu.querySelectorAll('a')).forEach(link => {
+  link.onclick = () => {
+    closeMenu();
+  };
+});
+// Highlight active nav on mobile
+(function() {
+  var path = window.location.pathname.split('/').pop();
+  if (!path) path = 'faqs.html';
+  var links = document.querySelectorAll('.mobile-menu a');
+  links.forEach(function(link) {
+    if (link.getAttribute('href') === path) {
+      link.classList.add('active');
+    }
+  });
+})();
 </script>
 
 </body>
