@@ -184,7 +184,8 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 1.1rem;
+  padding: 0.7rem 0.7rem; /* Reduced padding for less height */
+  min-height: 48px; /* Set a minimum height for compactness */
 }
 
 .mobile-logo {
@@ -199,18 +200,19 @@ nav a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.33em;
-  width: 36px;
-  height: 36px;
+  gap: 0.7em; /* Increased gap for more space between lines */
+  width: 32px;
+  height: 32px;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .hamburger span {
   display: block;
-  height: 3px;
-  width: 28px;
+  height: 2.5px; /* Thinner lines */
+  width: 24px; /* Slightly shorter lines */
   background: #fff;
   border-radius: 3px;
   transition: 0.3s;
@@ -1052,11 +1054,13 @@ body,
   .footer-separator {
     display: none !important;
   }
+}
 
 @media (max-width: 700px) {
   .content-section h3 {
     letter-spacing: 0.01em; /* or even 0em for a tighter look */
   }
+}
 
 @media (max-width: 700px) {
   /* Show hamburger menu and hide desktop nav */
